@@ -29,13 +29,17 @@ class Contact extends XmlDataAccess {
 		$address["city"] = (string)$this->GetXmlRootConfig()->contact->address->city;
 		$response["address"] = $address;
 
+		$response["telephone"] = (string)$this->GetXmlRootConfig()->contact->telephone;
+		$response["fax"] = (string)$this->GetXmlRootConfig()->contact->fax;
 		$response["site"] = (string)$this->GetXmlRootConfig()->contact->site;
 		$response["mail"] = (string)$this->GetXmlRootConfig()->contact->mail;
 
 		foreach($this->GetXmlRootConfig()->contact->members->children() as $member)
 		{
 			$node = array('name' => (string)$member->name,
-						  'telephone' => (string)$member->telephone);
+						  'telephone' => (string)$member->telephone,
+						  'portable' => (string)$member->portable,
+						  'mail' => (string)$member->mail);
 
 			$response["members"][] = $node;
 		}

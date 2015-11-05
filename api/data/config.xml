@@ -7,31 +7,23 @@
 		<smtp_password></smtp_password>
 	</mailer>
 	<contact>
-		<headquarter>Comité Salon Tout Pout l'Habitat</headquarter>
+		<headquarter>Imprimerie Fauchery</headquarter>
 		<address>
-			<firstLine>Menuiserie COMBE</firstLine>
-			<secondLine>ZI du Cappa</secondLine>
-			<postalCode>26140</postalCode> 
-			<city>Saint Rambert d'Albon</city>
+			<firstLine>34, route de Marseille</firstLine>
+			<secondLine>RN-7</secondLine>
+			<postalCode>38150</postalCode> 
+			<city>Chanas</city>
 		</address>
-		<site>http://www.salonhabitatsaintrambert.com</site>
-		<mail>contact@salonhabitatsaintrambert.com</mail>		
+		<telephone>04 74 84 26 13</telephone>
+		<fax>04 74 84 22 85</fax>
+		<site>http://www.fauchery.com/</site>
+		<mail>imprimerie@fauchery.com</mail>		
 		<members>
 			<member>
 				<name>Laurent TARDY</name>
-				<telephone>04 74 84 26 13</telephone>
-			</member>
-			<member>
-				<name>Chantal COMBE</name>
-				<telephone>06 07 34 49 45 ou 04 75 31 15 39</telephone>
-			</member>
-			<member>
-				<name>Murielle ou Philippe CELLE</name>
-				<telephone>04 75 31 21 18</telephone>
-			</member>
-			<member>
-				<name>Françoise SANFILIPPO</name>
-				<telephone>06 89 41 14 90</telephone>
+				<telephone>04 74 84 38 34</telephone>
+				<portable>06 09 10 46 77</portable>
+				<mail>imprimerie@fauchery.com</mail>
 			</member>			
 		</members>
 	</contact>

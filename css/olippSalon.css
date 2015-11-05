@@ -23,30 +23,35 @@
 }
 
 .navbar-inverse{
-	border-color: #8cc63e;
-	background-color: #8cc63e;
+	background-image: url('../img/nav/navbar-background.png');
+	border-color: #9acd03;
+	background-color: #9acd03;
 }
 
 .navbar-inverse .navbar-nav li a{
-	color: #401600;
+	color: #009147;
 	font-family: "Century Gothic";
 	font-weight: bold;
 }
 
 .navbar-inverse .navbar-nav li a:focus{
-	background-color: #401600;
+	background-image: url('../img/nav/navbar-focus-background.png');
+	/*background-color: #009147;*/
 }
 
 .navbar-inverse .navbar-nav .open a:focus{
-	background-color: #401600;
+	background-image: url('../img/nav/navbar-focus-background.png');
+	/*background-color: #009147;*/
 }
 
 .navbar-inverse .navbar-nav .open a:hover{
-	background-color: #401600;
+	background-image: url('../img/nav/navbar-focus-background.png');
+	/*background-color: #009147;*/
 }
 
 .dropdown-menu{
-	background-color: #8cc63e;
+	background-image: url('../img/nav/dropdown-background.png');
+	/*background-color: #9acd03;*/
 }
 
 .dropdown-menu li a:hover, 
@@ -56,32 +61,44 @@
 }
 
 .glyphicon{
-	color: #401600;
+	color: #009147;
 }
 
-.navbar-inverse .navbar-text{
-	color: #401600;
+.footer{
+	background-image: url('../img/footer/background-footer.png');
+	color: #009147;
 }
 
-.footer-panel{
-	background-color: #8cc63e;
-	border: none;
-	color: white;
+.footer-border{
+	border-right: solid 1px black;	
 }
 
-.footer-sponsor{
-	width: 150px;
-	height: 77px;
+.footer-logo{
+	text-align: center;
+	padding-top: 20px;
 }
 
-.footer-body{
-	color: #401600;
-	font-size: 12px;
+.footer-text{
+	padding-left: 40px;
+}
+
+.footer-line{
+	border-bottom: solid 1px black;
 }
 
 .footer-copyright{
-	color: white;
+	color: black;
 	font-size: 10px;
+	margin-left: 20px;
+}
+
+.footer-ul{
+	padding: 0; 
+	list-style-type: none;
+}
+
+.glyphicon-footer{
+	color: white;
 }
 
 .panel-default{
@@ -89,8 +106,8 @@
 }
 
 .panel-default > .panel-heading{
-	background-color: #8cc63e;
-	color: #401600;
+	background-color: #9acd03;
+	color: black;
 }
 
 .panel-title {
