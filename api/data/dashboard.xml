@@ -1,30 +1,25 @@
 <olipp>
-	<panelTitlePrincipal>Salon Tout pour l'Habitat 2016</panelTitlePrincipal>
-	<panelBodyTitle>Le salon régional de référence sur 2500 m2 couverts pour équiper, éco-concevoir, rénover, meubler, décorer... votre habitat.</panelBodyTitle>
-	<panelBodyDescription>Nous avons le plaisir de vous annoncer la date du Salon « Tout pour l'Habitat 2016 » qui se déroulera les 18, 19 et 20 Mars 2016 à la Salle polyvalente de St-Rambert d'Albon. Reconnu comme le salon régional de référence dans le domaine du développement durable et des nouvelles technologies pour l'habitat, cette manifestation attire toujours plus de visiteurs et clients potentiels chaque année. Avec une surface couverte de plus de 2500 m2 ses 80 exposants et une magnifique zone de restauration, il garde un potentiel de développement très important.</panelBodyDescription>
-	<panelTitleRightFirst>Dossier de participation</panelTitleRightFirst>
-	<panelLabelRightFirst>Télécharger</panelLabelRightFirst>
-	<panelBodyRightFirst>Pensez à nous retourner votre bulletin d'inscription à télécharger ci-dessus dûment rempli et accompagné de votre réglement avant le 15 Janvier 2016.</panelBodyRightFirst>
-	<panelTitleRightSecond>Horaires d'ouverture</panelTitleRightSecond>
-	<panelBodyRightSecondLine1>Vendredi 18 Mars de 14h à 19h</panelBodyRightSecondLine1>
-	<panelBodyRightSecondLine2>Inauguration officielle à 17h</panelBodyRightSecondLine2>
-	<panelBodyRightSecondLine3>Samedi 19 Mars de 10h à 19h</panelBodyRightSecondLine3>
-	<panelBodyRightSecondLine4>Dimanche 20 Mars de 10h à 18h</panelBodyRightSecondLine4>
-	<panelBodyRightSecondLine5>Tirage officiel du jeu salon à 18h</panelBodyRightSecondLine5>
-	<panelTitleRightThird>Infos pratiques</panelTitleRightThird>
-	<panelBodyRightThirdLine1>Salle Polyvalente et Omnisports</panelBodyRightThirdLine1>
-	<panelBodyRightThirdLine2>26140 Saint Rambert d'Albon</panelBodyRightThirdLine2>
-	<panelBodyRightThirdLine3>Entrée gratuite</panelBodyRightThirdLine3>
-	<panelBodyRightThirdLine4>Restauration sur le salon</panelBodyRightThirdLine4>
-	<addressTitle>Adresse du Salon</addressTitle>
-	<addressLine1>Salle Polyvalente et Omnisports</addressLine1>
-	<addressLine2>15 Rue Du Levant</addressLine2>
-	<codePostal>26140</codePostal>
-	<city>Saint Rambert d'Albon</city>
-	<country>France</country>
+	<panelTitlePrincipal>Fauchery</panelTitlePrincipal>
+	<panelBodyTitle>Il en faut du caractère pour traverser effectivement plus d'un siècle d'existence,
+dans un monde en pleine mutation, concurrentiel, où bien peu d'entreprises perdurent !</panelBodyTitle>
+	<panelBodyDescription> Le secret de son aspect toujours "vert", Fauchery le doit sans doute à sa tradition familiale, sa haute idée du service à la clientèle, sa longue expérience et son travail de qualité. Elle le doit encore à sa faculté d'adaptation à la fois aux demandes du public, et aux nouvelles techniques. De la pré-presse à l'offset en passant par l'impression numérique, de la simple carte de visite à l'impression du gros catalogue, tout est possible! Un service complet et de proximité, il suffit de le demander. A votre service depuis plus de 100 ans.
+</panelBodyDescription>
+	<imprimerie>
+		<title>Imprimerie</title>
+		<description>Malgré des années d'expérience, il y a toujours un brin d'émotion lors de la sortie de la première épreuve avant de lancer l'impression en série...</description>
+	</imprimerie>
+	<papeterie>
+		<title>Papeterie</title>
+		<description>Fauchery fait partie de APLUS PAPETERIE qui est une enseigne d’une cinquantaine de papetiers indépendants implantés en France...</description>
+	</papeterie>
+	<enseignes>
+		<title>Enseignes</title>
+		<description>Malgré des années d'expérience, il y a toujours un brin d'émotion lors de la sortie de la première épreuve avant de lancer l'impression en série...</description>
+	</enseignes>
+	<button>Lire la suite</button>
 	<movies>
-		<youtube>http://www.youtube.com/embed/JipnkPu08Vs</youtube>
-		<youtube>http://www.youtube.com/embed/Odu5VCcV0yU</youtube>
-		<youtube>http://www.youtube.com/embed/sxolNuvLWyc</youtube>
+		<youtube>http://www.youtube.com/embed/xVMpFXkJZZs</youtube>
+		<youtube>http://www.youtube.com/embed/qJA-Ys0eNAw</youtube>
+		<youtube>http://www.youtube.com/embed/sC0tzYQZ1EE</youtube>
 	</movies>
 </olipp>

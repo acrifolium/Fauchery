@@ -1,5 +1,9 @@
 var olippControllers = angular.module('olippControllers', []);
 
+olippControllers.controller('OlippHeaderCtrl', ['$scope', function($scope) {
+  
+}]);
+
 olippControllers.controller('OlippNavTreeCtrl', ['$scope', '$routeParams','dataWebServices', function($scope, $routeParams, dataWebServices) {
     
     dataWebServices.navigation().then(function(results){
@@ -24,7 +28,7 @@ olippControllers.controller('OlippCarouselCtrl', ['$scope', function($scope) {
   
 }]);
 
-olippControllers.controller('OlippCarouselSalonCtrl', ['$scope', function($scope) {
+olippControllers.controller('OlippCarouselFaucheryCtrl', ['$scope', function($scope) {
   
 }]);
 
@@ -43,14 +47,9 @@ olippControllers.controller('OlippDashboardCtrl', ['$scope', 'dataWebServices', 
 olippControllers.controller('OlippServiceCtrl', ['$scope','$routeParams', 'dataWebServices', function($scope, $routeParams, dataWebServices) {
   $scope.Id = $routeParams.id;
 
-  dataWebServices.exposant().then(function(results){
+  dataWebServices.service($scope.Id).then(function(results){
       console.log(results);
-      $scope.exposants = results.data;
-    });
-
-  dataWebServices.exposantForm($scope.Id).then(function(results){
-      console.log(results);
-      $scope.exposantForm = results.data;
+      $scope.service = results.data;
     });
 }]);
 

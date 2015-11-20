@@ -9,6 +9,7 @@
 	<contact>
 		<headquarter>Imprimerie Fauchery</headquarter>
 		<address>
+			<headquarter>Fauchery SAS</headquarter>
 			<firstLine>34, route de Marseille</firstLine>
 			<secondLine>RN-7</secondLine>
 			<postalCode>38150</postalCode> 
@@ -27,4 +28,11 @@
 			</member>			
 		</members>
 	</contact>
+	<horaire>
+		<title>Horaires d'ouvertures</title>
+		<week>Du Lundi au Vendredi</week>
+		<weekTime>9h/12h-14h/19h</weekTime>
+		<weekend>Samedi</weekend>
+		<weekendTime>9h/12h-14h/18h</weekendTime>
+	</horaire>
 </olipp>

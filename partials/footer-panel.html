@@ -2,31 +2,29 @@
 	<div class="container-fluid">
 
 			<div class="col-xs-6 col-sm-4 footer-border footer-logo">
-				<img src="img/footer/logo.png"/>
+				<img class="img-thumbnail" src="img/footer/logo.png"/>
 				<br/><br/><br/><p>&nbsp;</p>
 			</div>
 
 			<div class="col-xs-6 col-sm-4 footer-border">
-				<aside><h3 class="footer-line"><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>Fauchery SAS</span></h3>		
+				<aside><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>{{config.address.headquarter}}</span></h3>		
 					<ul class="footer-ul">
 						<li><span class="glyphicon glyphicon-home glyphicon-footer" aria-hidden="true"></span> {{config.headquarter}}</li>
-						<li>{{config.address.firstLine}}</li>
-						<li>{{config.address.secondLine}}</li>
-						<li class="footer-line">{{config.address.postalCode}} {{config.address.city}}</li>
-						<li class="footer-line"><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{config.telephone}}</li>
-						<li class="footer-line"><span class="glyphicon glyphicon-copy glyphicon-footer" aria-hidden="true"></span> {{config.fax}}</li>
-						<li class="footer-line"><span class="glyphicon glyphicon-globe glyphicon-footer" aria-hidden="true"></span> {{config.site}}</li>
-						<li class=><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{config.mail}}</li>
+						<li class=" footer-address">{{config.address.firstLine}}</li>
+						<li class=" footer-address">{{config.address.secondLine}} {{config.address.postalCode}} {{config.address.city}}</li>
+						<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{config.telephone}}</li>
+						<li><span class="glyphicon glyphicon-copy glyphicon-footer" aria-hidden="true"></span> {{config.fax}}</li>
+						<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{config.mail}}</li>
 					</ul>
 				</aside>
 			</div>
 
 			<div class="col-xs-6 col-sm-4 footer-text">
-				<aside ><h3 class="footer-line"><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>Contact</span></h3>			
+				<aside ><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>Contact</span></h3>			
 					<ul class="footer-ul" ng-repeat="member in config.members">
-						<li class="footer-line"><span class="glyphicon glyphicon-user glyphicon-footer" aria-hidden="true"></span> {{member.name}}</li>
-						<li class="footer-line"><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{member.telephone}}</li>
-						<li class="footer-line"><span class="glyphicon glyphicon-phone glyphicon-footer" aria-hidden="true"></span> {{member.portable}}</li>
+						<li><span class="glyphicon glyphicon-user glyphicon-footer" aria-hidden="true"></span> {{member.name}}</li>
+						<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{member.telephone}}</li>
+						<li><span class="glyphicon glyphicon-phone glyphicon-footer" aria-hidden="true"></span> {{member.portable}}</li>
 						<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{member.mail}}</li>
 					</ul>
 				</aside>			

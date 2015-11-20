@@ -3,9 +3,9 @@
 	require_once("Navigation.php");
 	require_once("Dashboard.php");
 	require_once("Contact.php");
-	require_once("Exposant.php");
 	require_once("Movie.php");
 	require_once("Contact.php");
+	require_once("Service.php");
 	require_once("Authentication.php");
 
 	class API extends REST {
@@ -63,19 +63,7 @@
 				$this->response($this->json($dash->GetDashboard()), 200);
 		}
 
-		private function exposant(){
-			if($this->get_request_method() != "GET"){
-				$this->response('',406);
-			}
-
-			$exp = ExposantFactory::create();
-			if(is_null($exp))
-				$this->response('',406);
-			else
-				$this->response($this->json($exp->GetExposant()), 200);
-		}
-
-		private function exposantForm(){
+		private function service(){
 			if($this->get_request_method() != "POST"){
 				$this->response('',406);
 			}
@@ -83,11 +71,11 @@
 			$data = json_decode(file_get_contents("php://input"),true);
 			$id = $data['id'];
 
-			$exp = ExposantFactory::create();
-			if(is_null($exp))
+			$serv = ServiceFactory::create();
+			if(is_null($serv))
 				$this->response('',406);
 			else
-				$this->response($this->json($exp->GetExposantForm($id)), 200);
+				$this->response($this->json($serv->GetService($id)), 200);
 		}
 
 		private function contact(){

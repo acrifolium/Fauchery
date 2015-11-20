@@ -23,6 +23,7 @@ class Contact extends XmlDataAccess {
 		$response["headquarter"] = (string)$this->GetXmlRootConfig()->contact->headquarter;
 
 		$address = array();
+		$address["headquarter"] = (string)$this->GetXmlRootConfig()->contact->address->headquarter;
 		$address["firstLine"] = (string)$this->GetXmlRootConfig()->contact->address->firstLine;
 		$address["secondLine"] = (string)$this->GetXmlRootConfig()->contact->address->secondLine;
 		$address["postalCode"] = (string)$this->GetXmlRootConfig()->contact->address->postalCode;
@@ -33,6 +34,14 @@ class Contact extends XmlDataAccess {
 		$response["fax"] = (string)$this->GetXmlRootConfig()->contact->fax;
 		$response["site"] = (string)$this->GetXmlRootConfig()->contact->site;
 		$response["mail"] = (string)$this->GetXmlRootConfig()->contact->mail;
+
+		$horaire = array();
+		$horaire["title"] = (string)$this->GetXmlRootConfig()->horaire->title;
+		$horaire["week"] = (string)$this->GetXmlRootConfig()->horaire->week;
+		$horaire["weekTime"] = (string)$this->GetXmlRootConfig()->horaire->weekTime;
+		$horaire["weekend"] = (string)$this->GetXmlRootConfig()->horaire->weekend;
+		$horaire["weekendTime"] = (string)$this->GetXmlRootConfig()->horaire->weekendTime;
+		$response["horaire"] = $horaire;
 
 		foreach($this->GetXmlRootConfig()->contact->members->children() as $member)
 		{

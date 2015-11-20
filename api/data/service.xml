@@ -1,9 +1,21 @@
 <olipp>
 	<service id="2">
-		<panelTitleCenter>Annuaire des exposants</panelTitleCenter>
-		<labelSearchToolbar>Rechercher un exposant</labelSearchToolbar>
-		<panelRightTitle>Dossier de participation</panelRightTitle>
-		<panelRightLabelDownload>Télécharger</panelRightLabelDownload>
-		<panelRightDescription>Pensez à nous retourner votre bulletin d'inscription à télécharger ci-dessus dûment rempli et accompagné de votre réglement avant le 15 Janvier 2016.</panelRightDescription>
+		<title>IMRPIMERIE</title>
+	</service>
+
+	<service id="3">
+		<title>PAPETERIE</title>
+		<linkApluspapeterie>http://fauchery.apluspapeterie.fr/</linkApluspapeterie>
+		<linkContent>APLUS PAPETERIE</linkContent>	
+		<youtube>http://www.youtube.com/embed/r-z2SA58V0g</youtube>	
+		<paragraphe1>Fauchery fait partie de APLUS PAPETERIE qui est une enseigne d’une cinquantaine de papetiers indépendants implantés en France.</paragraphe1>
+		<paragraphe2>Les magasins Aplus se sont regroupés au sein d’une coopérative afin de garantir à leur clientèle des prix d’achats négociés, des promotions et des prestations de services qualitatives tout au long de l’année.</paragraphe2>
+		<paragraphe3>Nos papeteries sont des magasins multi-métiers, qui commercialisent de la papeterie traditionnelle, des fournitures scolaires pour les écoles, des fournitures de bureau et informatiques pour les entreprises, ainsi que pour certains, des produits de librairie et des objets-cadeaux.</paragraphe3>
+		<paragraphe4>Chaque adhérent est un spécialiste de proximité, qui vous propose la qualité de service et les prix d’une grande enseigne, tout en offrant le relationnel et le savoir-faire d’un papetier traditionnel.</paragraphe4>
+		<paragraphe5>La marque aplus a été intégralement relookée en 2013, à l’occasion des 20 ans de la coopérative, symbole de renouveau et de dynamisme.</paragraphe5>
+	</service>
+
+	<service id="4">
+		<title>ENSEIGNES</title>
 	</service>
 </olipp>

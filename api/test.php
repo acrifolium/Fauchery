@@ -7,7 +7,7 @@
 
 <?php
 //phpinfo();
-	require_once('Contact.php');
+	require_once('Service.php');
 
 	/*
 	 *	Encode array into JSON
@@ -18,13 +18,15 @@
 		}
 	}
 
-$response = array();
-	$func = ContactFactory::create();
+	$response = array();
+	$func = ServiceFactory::create();
 
-		$result = $func->SendMail("azevedo", "olivier", "olivier.azevedo@gmail.com", "", "", "testtest");
-		if($result['status'] == "success")
-			$response = json($result);
-		else $response = json($result);
+	$response = json($func->GetService(4));
+	
+		// $result = $func->SendMail("azevedo", "olivier", "olivier.azevedo@gmail.com", "", "", "testtest");
+		// if($result['status'] == "success")
+		// 	$response = json($result);
+		// else $response = json($result);
 
 echo $response;
 

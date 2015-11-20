@@ -30,10 +30,6 @@ olippServices.factory('dataWebServices', ['$http',
                 });
     }
 
-    obj.exposant = function(){
-      return $http.get(serviceBase + 'exposant');      
-    }
-
     obj.movies = function($id){     
       return $http({
                     method: "post",
@@ -44,10 +40,10 @@ olippServices.factory('dataWebServices', ['$http',
                 });
     }
 
-    obj.exposantForm = function($id){     
+    obj.service = function($id){     
       return $http({
                     method: "post",
-                    url: serviceBase + "exposantForm",
+                    url: serviceBase + "service",
                     data: {
                         'id': $id
                     }
