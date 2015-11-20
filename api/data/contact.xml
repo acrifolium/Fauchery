@@ -1,5 +1,5 @@
 <olipp>
-	<contact id="5">
+	<contact id="6">
 		<form>
 			<fieldLastname>Nom</fieldLastname>
 			<requiredFieldLastname>Votre nom est requis.</requiredFieldLastname>
@@ -13,6 +13,5 @@
 			<fieldMessage>Message</fieldMessage>
 			<button>Envoyer</button>
 		</form>
-		<panelTitle1>Contact pour le salon</panelTitle1>
 	</contact>
 </olipp>

@@ -19,13 +19,13 @@ class Mailer extends XmlDataAccess {
 
     		case "ContactForm":
 
-    			$subject = "Site Web Salon Tout Pour L'Habitat";
+    			$subject = "Site Web Fauchery";
 				$body = "<html>";
 				$body .= "<head>";
-				$body .= "<title>Salon Tout pour l'Habitat</title>";
+				$body .= "<title>Fauchery</title>";
 				$body .= "</head>";
 				$body .= "<body>";
-				$body .= "<h1>Site Web Salon Tout Pour L'Habitat</h1>";
+				$body .= "<h1>Site Web Fauchery</h1>";
 				$body .= "<h3>" . $content . "</h3>";
 				$body .= "</body>";
 				$body .= "</html>";

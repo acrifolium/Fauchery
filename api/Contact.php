@@ -68,7 +68,6 @@ class Contact extends XmlDataAccess {
 
 		if (isset($this->GetXmlRootContact()->contact['id']) && $this->GetXmlRootContact()->contact['id'] == $id)
 		{
-
 			$response["fieldLastname"] = (string)$this->GetXmlRootContact()->contact->form->fieldLastname;
 			$response["requiredFieldLastname"] = (string)$this->GetXmlRootContact()->contact->form->requiredFieldLastname;
 			$response["fieldFirstname"] = (string)$this->GetXmlRootContact()->contact->form->fieldFirstname;
@@ -80,7 +79,6 @@ class Contact extends XmlDataAccess {
 			$response["fieldPhone"] = (string)$this->GetXmlRootContact()->contact->form->fieldPhone;
 			$response["fieldMessage"] = (string)$this->GetXmlRootContact()->contact->form->fieldMessage;
 			$response["button"] = (string)$this->GetXmlRootContact()->contact->form->button;
-			$response["panelTitle1"] = (string)$this->GetXmlRootContact()->contact->panelTitle1;
 		}
 		else 
 		{

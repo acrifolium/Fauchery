@@ -26,6 +26,23 @@ class Service extends XmlDataAccess {
 				if($id == 2) // Imprimerie
 				{
 					$response["title"] = (string)$service->title;
+					$response["description"] = (string)$service->description;
+					$response["youtube"] = (string)$service->youtube;
+
+					$offset = array();
+					$offset["title"] = (string)$service->offset->title;
+					$offset["description"] = (string)$service->offset->description;
+					$response["offset"] = $offset;
+
+					$prepresse = array();
+					$prepresse["title"] = (string)$service->prepresse->title;
+					$prepresse["description"] = (string)$service->prepresse->description;
+					$response["prepresse"] = $prepresse;
+
+					$numerique = array();
+					$numerique["title"] = (string)$service->numerique->title;
+					$numerique["description"] = (string)$service->numerique->description;
+					$response["numerique"] = $numerique;
 					return $response;
 				}
 				elseif ($id == 3) // Papeterie
@@ -44,6 +61,22 @@ class Service extends XmlDataAccess {
 				elseif ($id == 4) // Enseignes
 				{
 					$response["title"] = (string)$service->title;
+					$response["description"] = (string)$service->description;
+
+					$enseignes = array();
+					$enseignes["title"] = (string)$service->enseignes->title;
+					$enseignes["description"] = (string)$service->enseignes->description;
+					$response["enseignes"] = $enseignes;
+
+					$bureau = array();
+					$bureau["title"] = (string)$service->bureau->title;
+					$bureau["description"] = (string)$service->bureau->description;
+					$response["bureau"] = $bureau;
+
+					$vehicule = array();
+					$vehicule["title"] = (string)$service->vehicule->title;
+					$vehicule["description"] = (string)$service->vehicule->description;
+					$response["vehicule"] = $vehicule;
 					return $response;
 				}
 			}

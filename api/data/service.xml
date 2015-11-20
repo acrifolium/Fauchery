@@ -1,6 +1,23 @@
 <olipp>
 	<service id="2">
-		<title>IMRPIMERIE</title>
+		<title>IMPRIMERIE</title>
+		<description>“L'imprimerie est à l'écriture ce que l'écriture avait été aux hiéroglyphes : elle a fait faire un second pas à la pensée.”</description>
+		<youtube>http://www.youtube.com/embed/PWS77zzwt2s</youtube>	
+		<offset>
+			<title>Impression Offset</title>
+			<description>Le plein de couleurs ! Malgré des années d'expérience, il y a toujours un brin d'émotion lors de la sortie de la première épreuve avant de lancer l'impression en série. Que ce soit pour de la documentation administrative, de la plaquette de notoriété, du catalogue, de simples fiches ou étiquettes, le coup d'œil du professionnel est déterminant, l'exigence de qualité est impérative pour un tirage en noir, deux couleurs ou en quadrichromie. Fauchery est rodé à toutes épreuves et surtout dans le respect des délais. Pour un service complet, il suffit de commander !
+			</description>
+		</offset>
+		<prepresse>
+			<title>Prépresse</title>
+			<description>Déjà une bonne impression ! Les meilleures idées naissent du dialogue. Envie d’une plaquette, de têtes de lettres, de calendriers, catalogues, mailing ? L'idée s'arrête à la mise en forme, à l'utilisation ? L’imprimerie Fauchery peut vous aider à réaliser ces idées par l’intervention d’un personnel compétent et le soutien technique adapté. Le concept prend corps et s’habille même de couleurs. Il suffit d’oser.
+			</description>
+		</prepresse>
+		<numerique>
+			<title>Impression numérique</title>
+			<description>L’exigence de la modernité ! Non décidément, la photocopie couleur n’est pas totalement satisfaisante, l’impression classique trop coûteuse pour quelques exemplaires, un ordinateur relié à une presse numérique ou presse grand format et le tour est joué. Une formule bien adaptée à la petite série. Vous pouvez même faire de l’affiche ! Fauchery prend en compte vos besoins, il suffit de les exprimer.
+			</description>
+		</numerique>		
 	</service>
 
 	<service id="3">
@@ -17,5 +34,18 @@
 
 	<service id="4">
 		<title>ENSEIGNES</title>
+		<description>Votre imprimeur Fauchery réalise enseigne publicitaire, signalétique, panneau publicitaire, marquage adhésif, covering ...</description>
+		<enseignes>
+			<title>Enseignes</title>
+			<description>L’enseigne de votre entreprise ou de votre commerce est un élément primordial de votre communication. L'imprimerie Fauchery propose des enseignes d'un rendu éblouissant.</description>
+		</enseignes>
+		<bureau>
+			<title>Bureaux et Vitrines</title>
+			<description>Une touche originale et personnelle pour vos bureaux et vitrines ? Les vinyles opaques polymères, vitrophanies transparentes (avec blanc de soutien) ou les vinyles microperforés permettent d’afficher l’image de votre entreprise ou de communiquer ponctuellement sur une offre ou une actualité.</description>
+		</bureau>
+		<vehicule>
+			<title>Véhicules</title>
+			<description>Faites de votre véhicule votre SUPPORT de communication. C’est un outil publicitaire mobile visible par tous 24h / 24h – 7j / 7j. C’est un moyen pour communiquer sur l’image de votre entreprise profitablement et dont il serait dommage de se passer. De la citadine au semi-remorque, le marquage de véhicule se réalise grâce à un support adhésif résistant, adapté pour l’extérieur et pour le lavage.</description>
+		</vehicule>
 	</service>
 </olipp>
