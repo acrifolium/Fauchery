@@ -39,10 +39,17 @@
   <div class="left-side"></div>
 
   <div class="center-side">
-    <header>      
-      <div class="banniere-header" ng-controller="OlippHeaderCtrl" ng-include="'header.html'"></div>
-      <div ng-controller="OlippNavTreeCtrl" ng-include="'navigation-panel.html'"></div>
-      <div ng-controller="OlippCarouselCtrl" ng-include="'carousel-panel.html'"></div>
+    <header>   
+
+      <!-- inject:header -->
+      <!-- endinject -->
+
+      <!-- inject:navbar -->
+      <!-- endinject -->
+
+      <!-- inject:carousel -->
+      <!-- endinject -->
+
     </header>
 
     <div class="view-container">
@@ -50,9 +57,9 @@
       </div>
     </div>
 
-    <footer>
-      <div ng-controller="OlippFooterCtrl" ng-include="'footer-panel.html'"></div>
-    </footer>
+    <!-- inject:footer -->
+    <!-- endinject -->
+
   </div>
 
   <div class="right-side"></div>

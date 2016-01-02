@@ -28,7 +28,7 @@ module.exports = function () {
             }))
             .pipe(autoprefixer())
             .pipe(cssnext({ sourcemap: false }))
-            .pipe(concat('neovetus.css'))
+            .pipe(concat('fauchery.css'))
             .pipe(minify())
             .pipe(gulp.dest(paths.dist.stylesheets))
 

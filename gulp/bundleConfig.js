@@ -10,8 +10,8 @@ module.exports = {
     },
 
     externalFonts: [
-        "bootstrap/dist/fonts/*.*"
-    ],
+        "components-font-awesome/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}",
+        "bootstrap/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}"],
 
     cssExternal: [],
 

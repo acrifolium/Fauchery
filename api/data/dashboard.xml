@@ -1,19 +1,19 @@
 <olipp>
-	<panelTitlePrincipal>Fauchery</panelTitlePrincipal>
+	<panelTitlePrincipal>FAUCHERY</panelTitlePrincipal>
 	<panelBodyTitle>Il en faut du caractère pour traverser effectivement plus d'un siècle d'existence,
 dans un monde en pleine mutation, concurrentiel, où bien peu d'entreprises perdurent !</panelBodyTitle>
-	<panelBodyDescription> Le secret de son aspect toujours "vert", Fauchery le doit sans doute à sa tradition familiale, sa haute idée du service à la clientèle, sa longue expérience et son travail de qualité. Elle le doit encore à sa faculté d'adaptation à la fois aux demandes du public, et aux nouvelles techniques. De la pré-presse à l'offset en passant par l'impression numérique, de la simple carte de visite à l'impression du gros catalogue, tout est possible! Un service complet et de proximité, il suffit de le demander. A votre service depuis plus de 100 ans.
+	<panelBodyDescription> Le secret de son aspect toujours "vert", Fauchery le doit sans doute à sa tradition familiale, sa haute idée du service à la clientèle, sa longue expérience et son travail de qualité. Elle le doit encore à sa faculté d'adaptation à la fois aux demandes du public, et aux nouvelles techniques. De la pré-presse à l'offset en passant par l'impression numérique, de la simple carte de visite à l'impression du gros catalogue, tout est possible! Un service complet et de proximité, il suffit de le demander. A votre service depuis plus de 100 ans.
 </panelBodyDescription>
 	<imprimerie>
-		<title>Imprimerie</title>
+		<title>IMPRIMERIE</title>
 		<description>Malgré des années d'expérience, il y a toujours un brin d'émotion lors de la sortie de la première épreuve avant de lancer l'impression en série...</description>
 	</imprimerie>
 	<papeterie>
-		<title>Papeterie</title>
+		<title>PAPETERIE</title>
 		<description>Fauchery fait partie de APLUS PAPETERIE qui est une enseigne d’une cinquantaine de papetiers indépendants implantés en France...</description>
 	</papeterie>
 	<enseignes>
-		<title>Enseignes</title>
+		<title>ENSEIGNES</title>
 		<description>Votre imprimeur Fauchery réalise enseigne publicitaire, signalétique, panneau publicitaire, marquage adhésif, covering ...</description>
 	</enseignes>
 	<button>Lire la suite</button>

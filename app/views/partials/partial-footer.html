@@ -1,0 +1,38 @@
+<footer>
+	<div class="footer">
+		<div class="container-fluid">
+
+				<div class="col-xs-6 col-sm-4 footer-border footer-logo">
+					<img class="img-thumbnail" src="img/footer/logo.png"/>
+					<br/><br/><br/><p>&nbsp;</p>
+				</div>
+
+				<div class="col-xs-6 col-sm-4 footer-border">
+					<aside><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>{{config.address.headquarter}}</span></h3>		
+						<ul class="footer-ul">
+							<li><span class="glyphicon glyphicon-home glyphicon-footer" aria-hidden="true"></span> {{config.headquarter}}</li>
+							<li class=" footer-address">{{config.address.firstLine}}</li>
+							<li class=" footer-address">{{config.address.secondLine}} {{config.address.postalCode}} {{config.address.city}}</li>
+							<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{config.telephone}}</li>
+							<li><span class="glyphicon glyphicon-copy glyphicon-footer" aria-hidden="true"></span> {{config.fax}}</li>
+							<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{config.mail}}</li>
+						</ul>
+					</aside>
+				</div>
+
+				<div class="col-xs-6 col-sm-4 footer-text">
+					<aside ><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>Contact</span></h3>			
+						<ul class="footer-ul" ng-repeat="member in config.members">
+							<li><span class="glyphicon glyphicon-user glyphicon-footer" aria-hidden="true"></span> {{member.name}}</li>
+							<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{member.telephone}}</li>
+							<li><span class="glyphicon glyphicon-phone glyphicon-footer" aria-hidden="true"></span> {{member.portable}}</li>
+							<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{member.mail}}</li>
+						</ul>
+					</aside>			
+				</div>
+		</div>
+
+		<span class="footer-copyright">Copyright © {{date | date:'yyyy'}} - {{config.headquarter}}</span> 
+
+	</div>
+</footer>

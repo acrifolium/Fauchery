@@ -6,11 +6,12 @@
 module.exports = {
  
     sources: {
-        public : ["./app/views/**/*.html"],
+        public : ["./app/views/*.html"],
+        partials: "./app/views/partials/",
+        partialsWatch : "./app/views/partials/**/*.html",
         assets: [],
         api: ["./api/**/*.{php,xml,}", "./api/.htaccess"],
-        fonts: ["./fonts/**/*.{ttf,woff,woff2,eof,svg}",
-        "./bower_components/components-font-awesome/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}"],
+        fonts: ["./fonts/**/*.{ttf,woff,woff2,eof,svg}"],
         images: "./img/**/*",
         bower: "./bower_components/",
         scripts: "./app/**/*.js",

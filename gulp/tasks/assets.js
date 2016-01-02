@@ -23,8 +23,8 @@ module.exports = function () {
     var fonts = gulp.src(paths.sources.fonts)
                     .pipe(gulp.dest(paths.dist.fonts))
 
-    var externalFonts = gulp.src(bundleConfig.externalFonts, { cwd: paths.sources.bower, base: paths.sources.bower })
+    var externalFonts = gulp.src(bundleConfig.externalFonts, { cwd: paths.sources.bower })
                     .pipe(gulp.dest(paths.dist.fonts))
 
-    return merge(assets, api,images, fonts, externalFonts);
+    return merge(assets, api, images, fonts, externalFonts);
 }

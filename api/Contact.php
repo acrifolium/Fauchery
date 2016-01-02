@@ -23,6 +23,7 @@ class Contact extends XmlDataAccess {
 		$response["headquarter"] = (string)$this->GetXmlRootConfig()->contact->headquarter;
 
 		$address = array();
+		$address["title"] = (string)$this->GetXmlRootConfig()->contact->address->title;
 		$address["headquarter"] = (string)$this->GetXmlRootConfig()->contact->address->headquarter;
 		$address["firstLine"] = (string)$this->GetXmlRootConfig()->contact->address->firstLine;
 		$address["secondLine"] = (string)$this->GetXmlRootConfig()->contact->address->secondLine;

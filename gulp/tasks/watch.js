@@ -18,4 +18,6 @@ module.exports = function () {
     gulp.watch(paths.sources.api, ["assets"])
 
     gulp.watch(paths.sources.public, ["public"])
+
+    gulp.watch(paths.sources.partialsWatch, ["public"])
 }

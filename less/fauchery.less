@@ -4,6 +4,48 @@
 
 @fa-font-path: "../fonts";
 
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+       url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('../fonts/glyphicons-halflings-regular.svg#@{icon-font-svg-id}') format('svg');
+}
+
+/*******************************/
+/*          VARIABLES          */
+/*******************************/
+/****** COLORS ******/
+@green-fauchery-color: #1E3E14;
+@green-light-fauchery-color: #BED730;
+
+/****** FONTS ******/
+.font-navbar-inverse {
+	font-family: @museo-font-name;
+	font-weight: 500;
+	color: white;
+	font-size: 15px;
+}
+
+.font-panel-title {
+	font-family: @museo-font-name;
+	font-weight: 500;
+	color: white;
+	font-size: 20px;	
+}
+
+.font-body {
+	font-family: @museo-font-name;
+	font-weight: 300;
+	font-size: 15px;	
+}
+/*******************************/
+
+body {
+	.font-body;
+}
+
 .left-side{
 	width: 15%;
 	float: left;
@@ -25,7 +67,7 @@
 
 .header-banner-top{
 	height: 100px;
-	background-color: #1e3e14;
+	background-color: @green-fauchery-color;
 }
 
 .header-logo{
@@ -72,7 +114,7 @@
 
 .header-banner-bottom{
 	height:20px;
-	background-color: #bed730;
+	background-color: @green-light-fauchery-color;
 }
 
 .banniere-header{
@@ -80,15 +122,55 @@
 	margin-bottom: 5px;
 }
 
-.navbar-inverse{	
-	border-color: #1e3e14;
-	background-color: #1e3e14;
+.navbar-inverse {	
+	margin-top: 3px;
+	border-color: @green-fauchery-color;
+	background-color: @green-fauchery-color;
+	.navbar-nav {
+		li {
+			&:hover {
+				background-color: @green-light-fauchery-color;
+			}
+			a {
+				.font-navbar-inverse;
+				&:hover {
+					color: @green-fauchery-color;
+				}
+				&:focus {
+					background-color: @green-light-fauchery-color;
+					color: @green-fauchery-color;
+				}
+			}
+		}
+		open {
+			a {				
+				&:hover {
+					background-color: @green-light-fauchery-color;
+					color: @green-fauchery-color;
+				}
+				&:focus {
+					background-color: @green-light-fauchery-color;
+					color: @green-fauchery-color;
+				}
+			}
+		} 
+	} 
 }
 
-.navbar-inverse .navbar-nav li a{
-	color: white;
-	font-family: "Century Gothic";
-	font-weight: bold;
+.dropdown-menu{
+	background-color: @green-fauchery-color;
+	li {
+		a {
+			&:hover {
+				color: white;
+				background-color: @green-fauchery-color;
+			}
+			&:focus {
+				color: white;
+				background-color: @green-fauchery-color;
+			}
+		}
+	}
 }
 
 .img-thumbnail{
@@ -102,41 +184,8 @@
 	color: white;
 }
 
-.navbar-inverse .navbar-nav li:hover{
-	background-color: #bed730;
-}
-
-.navbar-inverse .navbar-nav li a:hover{
-	color: #1e3e14;
-}
-
-.navbar-inverse .navbar-nav li a:focus{
-	background-color: #bed730;
-	color: #1e3e14;	
-}
-
-.navbar-inverse .navbar-nav .open a:focus{
-	background-color: #bed730;
-	color: #1e3e14;
-}
-
-.navbar-inverse .navbar-nav .open a:hover{
-	background-color: #bed730;
-	color: #1e3e14;
-}
-
-.dropdown-menu{
-	background-color: #1e3e14;
-}
-
-.dropdown-menu li a:hover, 
-.dropdown-menu li a:focus{
-	color: white;
-	background-color: #1e3e14;
-}
-
 .footer{
-	background-color: #1e3e14;
+	background-color: @green-fauchery-color;
 	color: white;
 }
 
@@ -178,19 +227,14 @@
 
 .panel-default{
 	margin-top: 20px;
+	.panel-heading{
+		background-color: @green-fauchery-color;
+		text-align: center;
+	}
 }
 
 .panel-title{
-	color: white;
-	font-size: 20px;
-}
-
-.panel-center{
-	background-image: url('../img/dashboard/center-title.png');
-}
-
-.panel-right{
-	background-image: url('../img/dashboard/right-title.png');
+	.font-panel-title;
 }
 
 .label-horaire {
@@ -204,22 +248,6 @@
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 0.25em;
-}
-
-.panel-right h4{
-	color: black;
-}
-
-.panel-imprimerie{
-	background-image: url('../img/dashboard/imprimerie-title.png');
-}
-
-.panel-papeterie{
-	background-image: url('../img/dashboard/papeterie-title.png');
-}
-
-.panel-enseignes{
-	background-image: url('../img/dashboard/enseignes-title.png');
 }
 
 .container .jumbotron, .container-fluid .jumbotron{
@@ -267,10 +295,6 @@
 
 .alert{
 	margin-bottom: 0px;
-}
-
-.content-center{
-	text-align: center;
 }
 
 .required{

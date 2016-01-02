@@ -2,8 +2,8 @@
 <div ng-show="Id==2" class="container-fluid">
 	<div class="col-xs-12 col-sm-6 col-lg-8">
 		<div class="panel panel-default">
-			<div class="panel-heading panel-center"><h3 class="panel-title content-center">{{service.title}}</h3></div>
-			<div class="panel-body alert alert-success content-center">
+			<div class="panel-heading panel-center"><span class="panel-title">{{service.title}}</span></div>
+			<div class="panel-body alert alert-success">
 				{{service.description}}
 			</div>
 
@@ -26,41 +26,12 @@
 		</div>	
 	</div>
 
-	<div class="col-xs-6 col-lg-4">
-		<div class="panel panel-default">
-			<div class="panel-heading panel-right"><h3 class="panel-title content-center">{{config.horaire.title}}</h3></div>
-			<div class="panel-body alert alert-success">
-				<aside>
-					<ul class="footer-ul">
-						<li class="label-horaire label-info dashboard-day">{{config.horaire.week}}</li>
-						<li class="label-horaire label-warning dashboard-time">{{config.horaire.weekTime}}</li>
-						<li class="label-horaire label-info dashboard-day">{{config.horaire.weekend}}</li>
-						<li class="label-horaire label-warning dashboard-time">{{config.horaire.weekendTime}}</li>
-					</ul>
-				</aside>
-			</div>
+	<!-- inject:time -->
+	<!-- endinject -->
 
-		</div>
-	</div>
+	<!-- inject:address -->
+	<!-- endinject -->
 
-	<div class="col-xs-6 col-lg-4">
-		<div class="panel panel-default">
-			<div class="panel-heading panel-right"><h3 class="panel-title content-center">Adresse</h3></div>	
-			<div class="panel-body alert alert-success">
-				<aside><h3><span class="glyphicon glyphicon-align-left glyphicon-right" aria-hidden="true"></span> <span>Fauchery SAS</span></h3>		
-					<ul class="footer-ul">
-						<li><span class="glyphicon glyphicon-home glyphicon-right" aria-hidden="true"></span> {{config.headquarter}}</li>
-						<li class=" footer-address">{{config.address.firstLine}}</li>
-						<li class=" footer-address">{{config.address.secondLine}} {{config.address.postalCode}} {{config.address.city}}</li>
-						<li><span class="glyphicon glyphicon-phone-alt glyphicon-right" aria-hidden="true"></span> {{config.telephone}}</li>
-						<li><span class="glyphicon glyphicon-copy glyphicon-right" aria-hidden="true"></span> {{config.fax}}</li>
-						<li><span class="glyphicon glyphicon-envelope glyphicon-right" aria-hidden="true"></span> {{config.mail}}</li>
-					</ul>
-				</aside>	
-				<img class="img-thumbnail" src="img/plan/plan.png"/>			
-			</div>
-		</div>
-	</div>
 </div>
 
 <!-- PAPETERIE -->
@@ -68,8 +39,8 @@
 
 	<div class="col-xs-12 col-sm-6 col-lg-8">
 		<div class="panel panel-default">
-			<div class="panel-heading panel-center"><h3 class="panel-title content-center">{{service.title}}</h3></div>
-			<div class="panel-body alert alert-success content-center">
+			<div class="panel-heading panel-center"><span class="panel-title">{{service.title}}</span></div>
+			<div class="panel-body alert alert-success">
 				<div class="papeterie-apluspapeterie">
 					<a ng-href="{{service.linkApluspapeterie}}" target="blank"><img class="img-thumbnail" ng-src="img/header/aPlusPapeterie.png"><span>{{service.linkContent}}</span></a>
 				</div>
@@ -93,53 +64,25 @@
 		</div>	
 	</div>
 
-	<div class="col-xs-6 col-lg-4">
-		<div class="panel panel-default">
-			<div class="panel-heading panel-right"><h3 class="panel-title content-center">{{config.horaire.title}}</h3></div>
-			<div class="panel-body alert alert-success">
-				<aside>
-					<ul class="footer-ul">
-						<li class="label-horaire label-info dashboard-day">{{config.horaire.week}}</li>
-						<li class="label-horaire label-warning dashboard-time">{{config.horaire.weekTime}}</li>
-						<li class="label-horaire label-info dashboard-day">{{config.horaire.weekend}}</li>
-						<li class="label-horaire label-warning dashboard-time">{{config.horaire.weekendTime}}</li>
-					</ul>
-				</aside>
-			</div>
+	<!-- inject:time -->
+	<!-- endinject -->
 
-		</div>
-	</div>
+	<!-- inject:address -->
+	<!-- endinject -->
 
-	<div class="col-xs-6 col-lg-4">
-		<div class="panel panel-default">
-			<div class="panel-heading panel-right"><h3 class="panel-title content-center">Adresse</h3></div>	
-			<div class="panel-body alert alert-success">
-				<aside><h3><span class="glyphicon glyphicon-align-left glyphicon-right" aria-hidden="true"></span> <span>Fauchery SAS</span></h3>		
-					<ul class="footer-ul">
-						<li><span class="glyphicon glyphicon-home glyphicon-right" aria-hidden="true"></span> {{config.headquarter}}</li>
-						<li class=" footer-address">{{config.address.firstLine}}</li>
-						<li class=" footer-address">{{config.address.secondLine}} {{config.address.postalCode}} {{config.address.city}}</li>
-						<li><span class="glyphicon glyphicon-phone-alt glyphicon-right" aria-hidden="true"></span> {{config.telephone}}</li>
-						<li><span class="glyphicon glyphicon-copy glyphicon-right" aria-hidden="true"></span> {{config.fax}}</li>
-						<li><span class="glyphicon glyphicon-envelope glyphicon-right" aria-hidden="true"></span> {{config.mail}}</li>
-					</ul>
-				</aside>	
-				<img class="img-thumbnail" src="img/plan/plan.png"/>			
-			</div>
-		</div>
-	</div>
 </div>
 
 <!-- ENSEIGNES -->
 <div ng-show="Id==4" class="container-fluid">
 	<div class="col-xs-12 col-sm-6 col-lg-8">
 		<div class="panel panel-default">
-			<div class="panel-heading panel-center"><h3 class="panel-title content-center">{{service.title}}</h3></div>
-			<div class="panel-body alert alert-success content-center">
+			<div class="panel-heading panel-center"><span class="panel-title">{{service.title}}</span></div>
+			<div class="panel-body alert alert-success">
 				{{service.description}}
 			</div>
 
-			<div ng-controller="OlippCarouselFaucheryCtrl" ng-include="'carousel-enseignes-panel.html'"></div>
+			<!-- inject:carouselEnseignes -->
+			<!-- endinject -->
 
 			<div class="panel-body alert alert-success papeterie-description">
 				<h3 class="label label-default">{{service.enseignes.title}}</h3>
@@ -152,39 +95,10 @@
 		</div>	
 	</div>
 
-	<div class="col-xs-6 col-lg-4">
-		<div class="panel panel-default">
-			<div class="panel-heading panel-right"><h3 class="panel-title content-center">{{config.horaire.title}}</h3></div>
-			<div class="panel-body alert alert-success">
-				<aside>
-					<ul class="footer-ul">
-						<li class="label-horaire label-info dashboard-day">{{config.horaire.week}}</li>
-						<li class="label-horaire label-warning dashboard-time">{{config.horaire.weekTime}}</li>
-						<li class="label-horaire label-info dashboard-day">{{config.horaire.weekend}}</li>
-						<li class="label-horaire label-warning dashboard-time">{{config.horaire.weekendTime}}</li>
-					</ul>
-				</aside>
-			</div>
+	<!-- inject:time -->
+	<!-- endinject -->
 
-		</div>
-	</div>
-
-	<div class="col-xs-6 col-lg-4">
-		<div class="panel panel-default">
-			<div class="panel-heading panel-right"><h3 class="panel-title content-center">Adresse</h3></div>	
-			<div class="panel-body alert alert-success">
-				<aside><h3><span class="glyphicon glyphicon-align-left glyphicon-right" aria-hidden="true"></span> <span>Fauchery SAS</span></h3>		
-					<ul class="footer-ul">
-						<li><span class="glyphicon glyphicon-home glyphicon-right" aria-hidden="true"></span> {{config.headquarter}}</li>
-						<li class=" footer-address">{{config.address.firstLine}}</li>
-						<li class=" footer-address">{{config.address.secondLine}} {{config.address.postalCode}} {{config.address.city}}</li>
-						<li><span class="glyphicon glyphicon-phone-alt glyphicon-right" aria-hidden="true"></span> {{config.telephone}}</li>
-						<li><span class="glyphicon glyphicon-copy glyphicon-right" aria-hidden="true"></span> {{config.fax}}</li>
-						<li><span class="glyphicon glyphicon-envelope glyphicon-right" aria-hidden="true"></span> {{config.mail}}</li>
-					</ul>
-				</aside>	
-				<img class="img-thumbnail" src="img/plan/plan.png"/>			
-			</div>
-		</div>
-	</div>
+	<!-- inject:address -->
+	<!-- endinject -->
+	
 </div>
