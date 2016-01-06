@@ -4,18 +4,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading panel-center"><span class="panel-title">{{config.mail}}</span></div>
 			<div class="panel-body">
-				<div ng-show="status==1" class="alert alert-success" role="alert">
-					<span class="glyphicon glyphicon-ok" aria-hidden="true" />
-					<span class="sr-only">Success:</span>
-					  	{{successMessage}}
-				</div>
-
-				<div ng-show="status==2" class="alert alert-danger" role="alert">
-					<span class="glyphicon glyphicon-remove" aria-hidden="true" />
-					<span class="sr-only">Error:</span>
-					  	{{errorMessage}}
-				</div>
-
+				
 				<form name="contactForm" ng-submit="Send(contactForm.$valid)" novalidate>
 
 					    <div class="form-group" ng-class="{ 'has-error' : contactForm.lastname.$invalid && !contactForm.lastname.$pristine }">
@@ -69,7 +58,7 @@
 					        <textarea rows="4" name="message" tabindex="1" class="form-control" placeholder="{{contact.fieldMessage}}" ng-model="contact.message" />		        
 					    </div>
 
-					    <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">{{contact.button}}</button>
+					    <button type="submit" class="btn btn-primary btnContact" ng-disabled="contactForm.$invalid">{{contact.button}}</button>
 				</form>
 			</div>
 		</div>

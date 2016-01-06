@@ -4,16 +4,18 @@
  
  var olippApp = angular.module('olippApp', [
    'ngRoute',
+   'blockUI',
+   'ngNotify',
    'olippDirectives',
    'olippFilters',
    'olippControllers',
    'olippServices'
  ]);
- 
+
  var olippServices = angular.module('olippServices', ['ngResource']);
- 
- olippApp.config(['$routeProvider',
-   function($routeProvider) {    
+
+ olippApp.config(['$routeProvider', 'blockUIConfig',
+   function($routeProvider, blockUIConfig) {
  
      $routeProvider.
        when('/dashboard', {
@@ -39,6 +41,13 @@
        otherwise({
          redirectTo: '/dashboard',
        });
+
+      // Change the default overlay message
+      blockUIConfig.message = 'Loading';
+
+      // Provide a custom template to use
+      //blockUIConfig.template = '<pre><code><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></code></pre>';
+
    }])
    .run(['$rootScope', '$location', 'dataWebServices', function($rootScope, $location, dataWebServices){
  
@@ -51,6 +60,7 @@
            });
          }
  
+        // NavBar data
         if($rootScope.tree === undefined)
         {
            dataWebServices.navigation().then(function(results){

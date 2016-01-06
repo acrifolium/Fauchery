@@ -13,7 +13,10 @@ module.exports = {
         "components-font-awesome/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}",
         "bootstrap/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}"],
 
-    cssExternal: [],
+    cssExternal: [
+        "angular-block-ui/dist/angular-block-ui.min.css",
+        "ng-notify/dist/ng-notify.min.css"
+    ],
 
     jsExternal: [
         //JQUERY
@@ -25,6 +28,8 @@ module.exports = {
         //ANGULAR
         "angular/angular.js",
         "angular-route/angular-route.js",
-        "angular-resource/angular-resource.js"
+        "angular-resource/angular-resource.js",
+        "angular-block-ui/dist/angular-block-ui.min.js",
+        "ng-notify/dist/ng-notify.min.js"
     ]
 }

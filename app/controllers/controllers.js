@@ -16,7 +16,9 @@ olippControllers.controller('OlippServiceCtrl', ['$scope','$routeParams', 'dataW
     });
 }]);
 
-olippControllers.controller('OlippContactCtrl', ['$scope','$routeParams', 'dataWebServices', function($scope, $routeParams, dataWebServices) {
+olippControllers.controller('OlippContactCtrl', ['$scope', 'blockUI', 'blockUIConfig', 'ngNotify', '$routeParams', 'dataWebServices', 
+  function($scope, blockUI, blockUIConfig, ngNotify, $routeParams, dataWebServices) {
+
   $scope.Id = $routeParams.id;
 
   dataWebServices.contact($scope.Id).
@@ -28,39 +30,58 @@ olippControllers.controller('OlippContactCtrl', ['$scope','$routeParams', 'dataW
                           console.log(results);
                         });
 
-  $scope.status = 0;
+  $scope.inProgress = false;
+
+  $scope.resetForm = function() {
+    $scope.contact.lastname = undefined; 
+    $scope.contact.firstname = undefined;
+    $scope.contact.email = undefined;
+    $scope.contact.company = undefined;
+    $scope.contact.telephone = undefined;
+    $scope.contact.message = undefined; 
+  }
 
   $scope.Send = function(){
 
-  if($scope.company == undefined) $scope.company = "";
-  if($scope.telephone == undefined) $scope.telephone = ""; 
-  if($scope.message == undefined) $scope.message = "";
+    ngNotify.config(
+    {
+      position: 'bottom',
+      duration: 3000,
+      sticky: false,
+      button: true,
+      html: false
+    });
 
-  dataWebServices.sendMail($scope.contact.lastname, 
-                           $scope.contact.firstname, 
-                           $scope.contact.email,
-                           $scope.contact.company,
-                           $scope.contact.telephone,
-                           $scope.contact.message).
-                        success(function(results, status, headers, config) {
-                                console.log("success");
-                                console.log(results.data);
-                                $scope.status = 1; 
-                                $scope.successMessage = results.message;    
-                                $scope.contact.lastname = ""; 
-                                $scope.contact.firstname = "";
-                                $scope.contact.email = "";
-                                $scope.contact.company = "";
-                                $scope.contact.telephone = "";
-                                $scope.contact.message = "";                      
-                        }).
-                        error(function(results, status, headers, config) {
-                                console.log("error");
-                                console.log(results.data);
-                                $scope.status = 2;
-                                $scope.errorMessage = results.data.message; 
-                        });
-                      };
+    ngNotify.addType('noticeFaucherySuccess', 'notice-fauchery-success');
+
+    if($scope.company == undefined) $scope.company = "";
+    if($scope.telephone == undefined) $scope.telephone = ""; 
+    if($scope.message == undefined) $scope.message = "";
+
+    // Block the user interface
+    blockUIConfig.message = 'Envoi du mail en cours...';
+    blockUI.start();
+
+    dataWebServices.sendMail($scope.contact.lastname, 
+                             $scope.contact.firstname, 
+                             $scope.contact.email,
+                             $scope.contact.company,
+                             $scope.contact.telephone,
+                             $scope.contact.message).
+                          success(function(results, status, headers, config) {  
+                                  // Unblock the user interface
+                                  blockUI.stop(); 
+                                  $scope.resetForm();
+                                  ngNotify.set(results.message, 'noticeFaucherySuccess');
+                                  console.log(results);                                                                                        
+                          }).
+                          error(function(results, status, headers, config) {                                  
+                                  // Unblock the user interface
+                                  blockUI.stop(); 
+                                  ngNotify.set(results.message, 'error');
+                                  console.log(results);
+                          });
+                        };
 
 }]);
 

@@ -33,16 +33,16 @@ module.exports = function () {
             .pipe(gulp.dest(paths.dist.stylesheets))
 
     // Dist external stylesheets
-    /*var libCss = gulp.src(bundleConfig.cssExternal, { cwd: paths.sources.bower })
+    var libCss = gulp.src(bundleConfig.cssExternal, { cwd: paths.sources.bower })
         .pipe(opts.plumber ? plumber() : util.noop())
             .pipe(less({
                 paths: [path.join(__dirname, 'less', 'includes')]
             }))
             .pipe(autoprefixer())
             .pipe(cssnext({ sourcemap: false }))
-            .pipe(gulp.dest(paths.dist.libs))
+            .pipe(gulp.dest(paths.dist.stylesheets))
 
-    return merge(localCss, libCss);*/
+    return merge(localCss, libCss);
 
-    return merge(localCss);
+    /*return merge(localCss);*/
 }
