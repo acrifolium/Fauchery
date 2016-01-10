@@ -1,16 +1,12 @@
 <?php
 
-require_once("XmlDataAccess.php");
-
-class Mailer extends XmlDataAccess {
+class Mailer {
 
 	private $mailFrom;
 
 	public function __construct()
     {
     	parent::__construct();
-
-    	$this->mailTo = $this->GetXmlRootConfig()->contact->mail;
     }
 
     public function SendMail($type, $mailFrom, $content){
@@ -34,8 +30,10 @@ class Mailer extends XmlDataAccess {
 				$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 				$headers .= "From: <".$mailFrom.">" . "\r\n";
 
+                $mailTo = "imprimerie@fauchery.com";
+                
 				// The mail is sent to Fauchery mail store from this WebSite
-				return mail($this->mailTo, $subject, $body, $headers);
+				return mail($mailTo, $subject, $body, $headers);
 
     			break;
     		default:

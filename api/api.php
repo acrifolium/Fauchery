@@ -1,11 +1,6 @@
 <?php
  	require_once("libs/Rest.inc.php");	
-	require_once("Navigation.php");
-	require_once("Dashboard.php");
 	require_once("Contact.php");
-	require_once("Movie.php");
-	require_once("Contact.php");
-	require_once("Service.php");
 
 	class API extends REST {
 	
@@ -24,87 +19,6 @@
 				$this->$func();
 			else
 				$this->response('',404); // If the method not exist with in this class "Page not found".
-		}
-		
-		private function navigation(){
-			if($this->get_request_method() != "GET"){
-				$this->response('',406);
-			}
-
-			$nav = NavigationFactory::create();
-			if(is_null($nav))
-				$this->response('',406);
-			else
-				$this->response($this->json($nav->GetNavigation()), 200);
-		}
-
-		private function config(){
-			if($this->get_request_method() != "GET"){
-				$this->response('',406);
-			}
-
-			$cont = ContactFactory::create();
-			if(is_null($cont))
-				$this->response('',406);
-			else
-				$this->response($this->json($cont->GetContact()), 200);
-		}
-
-		private function dashboard(){
-			if($this->get_request_method() != "GET"){
-				$this->response('',406);
-			}
-
-			$dash = DashboardFactory::create();
-			if(is_null($dash))
-				$this->response('',406);
-			else
-				$this->response($this->json($dash->GetDashboard()), 200);
-		}
-
-		private function service(){
-			if($this->get_request_method() != "POST"){
-				$this->response('',406);
-			}
-
-			$data = json_decode(file_get_contents("php://input"),true);
-			$id = $data['id'];
-
-			$serv = ServiceFactory::create();
-			if(is_null($serv))
-				$this->response('',406);
-			else
-				$this->response($this->json($serv->GetService($id)), 200);
-		}
-
-		private function contact(){
-			if($this->get_request_method() != "POST"){
-				$this->response('',406);
-			}
-
-			$data = json_decode(file_get_contents("php://input"),true);
-			$id = $data['id'];
-
-			$cont = ContactFactory::create();
-			if(is_null($cont))
-				$this->response('',406);
-			else
-				$this->response($this->json($cont->GetContactForm($id)), 200);
-		}
-
-		private function movies(){
-			if($this->get_request_method() != "POST"){
-				$this->response('',406);
-			}
-
-			$data = json_decode(file_get_contents("php://input"),true);
-			$id = $data['id'];
-
-			$mov = MovieFactory::create();
-			if(is_null($mov))
-				$this->response('',406);
-			else
-				$this->response($this->json($mov->GetMovies($id)), 200);
 		}
 
 		private function sendMail(){

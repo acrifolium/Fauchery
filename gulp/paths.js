@@ -15,7 +15,8 @@ module.exports = {
         images: "./img/**/*",
         bower: "./bower_components/",
         scripts: "./app/**/*.js",
-        stylesheets: ["./less/*.less", "./less/**/*.less"]
+        stylesheets: ["./less/*.less", "./less/**/*.less"],
+        app_data: "./App_Data/Languages/**/*.json"
     },
 
     dist: {
@@ -25,6 +26,7 @@ module.exports = {
         stylesheets: path + "css/",
         libs: path + "libs/",
         fonts: path + "fonts/",
-        images: path + "img/"
+        images: path + "img/",
+        app_data: path + "App_Data/Languages/"
     }
 }

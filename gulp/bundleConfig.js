@@ -30,6 +30,8 @@ module.exports = {
         "angular-route/angular-route.js",
         "angular-resource/angular-resource.js",
         "angular-block-ui/dist/angular-block-ui.min.js",
-        "ng-notify/dist/ng-notify.min.js"
+        "ng-notify/dist/ng-notify.min.js",
+        "angular-translate/angular-translate.js",
+        "angular-translate-loader-url/angular-translate-loader-url.js"
     ]
 }

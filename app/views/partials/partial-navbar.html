@@ -12,19 +12,28 @@
     </div>
 
       <div class="collapse navbar-collapse" id="navbar">
-        <ul ng-repeat="node in menuItems" class="nav navbar-nav"> 
-            <li ng-If="node.children == null"><a href="#/{{node.type}}/{{node.id}}">{{node.caption}}</a></li>
-            <li ng-If="node.children != null" class="dropdown">
-              <a ng-href="" class="dropdown-toggle" data-toggle="dropdown">{{node.caption}}<b class="caret"></b></a>
-              <ul class="dropdown-menu">              
-                <li ng-repeat="child in node.children"><a ng-href="#/{{child.type}}/{{child.id}}">{{child.caption}}</a></li>
-              </ul>
-            </li>
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#/imprimerie">{{ 'NAVBAR.MENU_IMPRIMERIE' | translate }}</a>
+          </li>
+          <li>
+            <a href="#/papeterie">{{ 'NAVBAR.MENU_PAPETERIE' | translate }}</a>
+          </li>
+          <li>
+            <a href="#/enseignes">{{ 'NAVBAR.MENU_ENSEIGNES' | translate }}</a>
+          </li>
+          <li>
+            <a href="#/movie">{{ 'NAVBAR.MENU_MOVIE' | translate }}</a>
+          </li>
+          <li>
+            <a href="#/contact">{{ 'NAVBAR.MENU_CONTACT' | translate }}</a>
+          </li>
         </ul>
 
-        <ul class="nav navbar-nav navbar-right">   
+        <!--<ul class="nav navbar-nav navbar-right">   
           <img class="img-thumbnail" src="img/nav/logo.png" />       
-        </ul>
+        </ul>-->
+        
       </div>
 
   </div>

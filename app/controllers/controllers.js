@@ -1,36 +1,7 @@
 var olippControllers = angular.module('olippControllers', []);
 
-olippControllers.controller('OlippDashboardCtrl', ['$scope', 'dataWebServices', function($scope, dataWebServices) {
-  dataWebServices.dashboard().then(function(results){
-    console.log(results);
-    $scope.dashboard = results.data;
-  });
-}]);
-
-olippControllers.controller('OlippServiceCtrl', ['$scope','$routeParams', 'dataWebServices', function($scope, $routeParams, dataWebServices) {
-  $scope.Id = $routeParams.id;
-
-  dataWebServices.service($scope.Id).then(function(results){
-      console.log(results);
-      $scope.service = results.data;
-    });
-}]);
-
-olippControllers.controller('OlippContactCtrl', ['$scope', 'blockUI', 'blockUIConfig', 'ngNotify', '$routeParams', 'dataWebServices', 
-  function($scope, blockUI, blockUIConfig, ngNotify, $routeParams, dataWebServices) {
-
-  $scope.Id = $routeParams.id;
-
-  dataWebServices.contact($scope.Id).
-                        success(function(results, status, headers, config) {
-                          console.log(results);
-                          $scope.contact = results;
-                        }).
-                        error(function(results, status, headers, config) {
-                          console.log(results);
-                        });
-
-  $scope.inProgress = false;
+olippControllers.controller('OlippContactCtrl', ['$scope', 'blockUI', 'blockUIConfig', 'ngNotify', 'dataWebServices', 
+  function($scope, blockUI, blockUIConfig, ngNotify, dataWebServices) {
 
   $scope.resetForm = function() {
     $scope.contact.lastname = undefined; 
@@ -83,19 +54,5 @@ olippControllers.controller('OlippContactCtrl', ['$scope', 'blockUI', 'blockUICo
                           });
                         };
 
-}]);
-
-olippControllers.controller('OlippMovieCtrl', ['$scope','$routeParams','dataWebServices', function($scope, $routeParams, dataWebServices) {
-  $scope.MovieTitle = "Movie AngularJS Page";
-  $scope.Id = $routeParams.id;
-
-  dataWebServices.movies($scope.Id).
-                        success(function(results, status, headers, config) {
-                          console.log(results);
-                          $scope.movies = results;
-                        }).
-                        error(function(results, status, headers, config) {
-                          console.log(results);
-                        });
 }]);
 

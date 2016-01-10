@@ -8,31 +8,31 @@
 				</div>
 
 				<div class="col-xs-6 col-sm-4 footer-border">
-					<aside><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>{{config.address.headquarter}}</span></h3>		
+					<aside><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>{{ 'CONFIG.ADDRESS.HEADQUARTER' | translate }}</span></h3>		
 						<ul class="footer-ul">
-							<li><span class="glyphicon glyphicon-home glyphicon-footer" aria-hidden="true"></span> {{config.headquarter}}</li>
-							<li class=" footer-address">{{config.address.firstLine}}</li>
-							<li class=" footer-address">{{config.address.secondLine}} {{config.address.postalCode}} {{config.address.city}}</li>
-							<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{config.telephone}}</li>
-							<li><span class="glyphicon glyphicon-copy glyphicon-footer" aria-hidden="true"></span> {{config.fax}}</li>
-							<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{config.mail}}</li>
+							<li><span class="glyphicon glyphicon-home glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.HEADQUARTER' | translate}}</li>
+							<li class=" footer-address">{{ 'CONFIG.ADDRESS.FIRSTLINE' | translate}}</li>
+							<li class=" footer-address">{{ 'CONFIG.ADDRESS.SECONDLINE' | translate}} {{ 'CONFIG.ADDRESS.POSTALCODE' | translate}} {{ 'CONFIG.ADDRESS.CITY' | translate}}</li>
+							<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.TELEPHONE' | translate}}</li>
+							<li><span class="glyphicon glyphicon-copy glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.FAX' | translate}}</li>
+							<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.MAIL' | translate}}</li>
 						</ul>
 					</aside>
 				</div>
 
 				<div class="col-xs-6 col-sm-4 footer-text">
-					<aside ><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>Contact</span></h3>			
-						<ul class="footer-ul" ng-repeat="member in config.members">
-							<li><span class="glyphicon glyphicon-user glyphicon-footer" aria-hidden="true"></span> {{member.name}}</li>
-							<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{member.telephone}}</li>
-							<li><span class="glyphicon glyphicon-phone glyphicon-footer" aria-hidden="true"></span> {{member.portable}}</li>
-							<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{member.mail}}</li>
+					<aside ><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>{{ 'CONFIG.CEO.TITLE' | translate }}</span></h3>			
+						<ul class="footer-ul">
+							<li><span class="glyphicon glyphicon-user glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.NAME' | translate}}</li>
+							<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.TELEPHONE' | translate}}</li>
+							<li><span class="glyphicon glyphicon-phone glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.PORTABLE' | translate}}</li>
+							<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.MAIL' | translate}}</li>
 						</ul>
 					</aside>			
 				</div>
 		</div>
 
-		<span class="footer-copyright">Copyright © {{date | date:'yyyy'}} - {{config.headquarter}}</span> 
+		<span class="footer-copyright">Copyright © {{date | date:'yyyy'}} - {{'CONFIG.HEADQUARTER' | translate}}</span> 
 
 	</div>
 </footer>

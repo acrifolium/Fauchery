@@ -6,6 +6,7 @@
    'ngRoute',
    'blockUI',
    'ngNotify',
+   'pascalprecht.translate',
    'olippDirectives',
    'olippFilters',
    'olippControllers',
@@ -14,29 +15,28 @@
 
  var olippServices = angular.module('olippServices', ['ngResource']);
 
- olippApp.config(['$routeProvider', 'blockUIConfig',
-   function($routeProvider, blockUIConfig) {
+ olippApp.config(['$routeProvider', 'blockUIConfig', '$translateProvider',
+   function($routeProvider, blockUIConfig, $translateProvider) {
  
      $routeProvider.
        when('/dashboard', {
-         templateUrl: 'Dashboard.html',
-         controller: 'OlippDashboardCtrl'
+         templateUrl: 'Dashboard.html'
        }).
-       when('/service/:id', {
-         templateUrl: 'Service.html',
-         controller: 'OlippServiceCtrl'
+       when('/imprimerie', {
+         templateUrl: 'Imprimerie.html'
        }).
-       when('/contact/:id', {
+       when('/papeterie', {
+         templateUrl: 'Papeterie.html'
+       }).
+       when('/enseignes', {
+         templateUrl: 'Enseignes.html'
+       }).
+       when('/contact', {
          templateUrl: 'Contact.html',
          controller: 'OlippContactCtrl'
        }).
-       when('/article/:id', {
-         templateUrl: 'Article.html',
-         controller: 'OlippArticleCtrl'
-       }).
-       when('/movie/:id', {
-         templateUrl: 'Movie.html',
-         controller: 'OlippMovieCtrl'
+       when('/movie', {
+         templateUrl: 'Movie.html'
        }).      
        otherwise({
          redirectTo: '/dashboard',
@@ -45,42 +45,66 @@
       // Change the default overlay message
       blockUIConfig.message = 'Loading';
 
-      // Provide a custom template to use
-      //blockUIConfig.template = '<pre><code><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></code></pre>';
+      //Angular translate
+      $translateProvider.useUrlLoader('App_Data/Languages/fr.json');
+      $translateProvider.preferredLanguage('fr');
+      //$translateProvider.fallbackLanguage('fr');
+
+      // Enable escaping of HTML
+      $translateProvider.useSanitizeValueStrategy('escapeParameters');
 
    }])
-   .run(['$rootScope', '$location', 'dataWebServices', function($rootScope, $location, dataWebServices){
+   .run(['$rootScope', '$location', '$translate',
+    function($rootScope, $location, $translate){
  
-         // Data displayed in the footer and Contact page
-         if($rootScope.config === undefined)
-         {
-           dataWebServices.config().then(function(results){
-             console.log(results);
-             $rootScope.config = results.data;
-           });
-         }
- 
-        // NavBar data
-        if($rootScope.tree === undefined)
-        {
-           dataWebServices.navigation().then(function(results){
-            console.log(results);
-            $rootScope.tree = results.data;
+      // Manage Dashboard Movies
+      $rootScope.DashMovies = [];
+      $translate('DASHBOARD.MOVIES.ONE').then(function (translation) {
+        $rootScope.DashMovies.push(translation);
+      });
+      $translate('DASHBOARD.MOVIES.TWO').then(function (translation) {
+        $rootScope.DashMovies.push(translation);
+      });
+      $translate('DASHBOARD.MOVIES.THREE').then(function (translation) {
+        $rootScope.DashMovies.push(translation);
+      });
 
-            $rootScope.dashboard = [];
-            $rootScope.menuItems = [];
+      // Manage Movies page
+      $rootScope.Movies = [];
+      $translate('MOVIES.ONE').then(function (translation) {
+        $rootScope.Movies.push(translation);
+      });
+      $translate('MOVIES.TWO').then(function (translation) {
+        $rootScope.Movies.push(translation);
+      });
+      $translate('MOVIES.THREE').then(function (translation) {
+        $rootScope.Movies.push(translation);
+      });
+      $translate('MOVIES.FOUR').then(function (translation) {
+        $rootScope.Movies.push(translation);
+      });
+      $translate('MOVIES.FIVE').then(function (translation) {
+        $rootScope.Movies.push(translation);
+      });
+      $translate('MOVIES.SIX').then(function (translation) {
+        $rootScope.Movies.push(translation);
+      });
+      $translate('MOVIES.SEVEN').then(function (translation) {
+        $rootScope.Movies.push(translation);
+      });
+      $translate('MOVIES.HEIGHT').then(function (translation) {
+        $rootScope.Movies.push(translation);
+      });
+      $translate('MOVIES.NINE').then(function (translation) {
+        $rootScope.Movies.push(translation);
+      });
+      $translate('MOVIES.TEN').then(function (translation) {
+        $rootScope.Movies.push(translation);
+      });
+      $translate('MOVIES.ELEVEN').then(function (translation) {
+        $rootScope.Movies.push(translation);
+      });
 
-            for (var i = 0; i < $rootScope.tree.length; i++) {
-              if($rootScope.tree[i].type == 'dashboard') {
-                $rootScope.dashboard = $rootScope.tree[i];
-              }
-              else if($rootScope.tree[i].type != 'dashboard') {
-                $rootScope.menuItems.push($rootScope.tree[i]);
-              }
-            }    
-          });
-        }
-
-        $rootScope.date = new Date();   
+      $rootScope.date = new Date();   
  
    }]);

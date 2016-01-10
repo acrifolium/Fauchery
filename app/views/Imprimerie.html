@@ -1,0 +1,34 @@
+<div class="container-fluid">
+	<div class="col-xs-12 col-sm-6 col-lg-8">
+		<div class="panel panel-default">
+			<div class="panel-heading panel-center"><span class="panel-title">{{ 'IMPRIMERIE.TITLE' | translate }}</span></div>
+			<div class="panel-body alert alert-success">
+				{{ 'IMPRIMERIE.DESCRIPTION' | translate }}
+			</div>
+
+			<div>
+				<div class="thumbnail">
+			    	<div class="embed-responsive embed-responsive-16by9">
+			    		<iframe ng-src="{{ 'IMPRIMERIE.MOVIE' | translate | trusted}}"></iframe>
+					</div>
+			  	</div>
+			</div> 
+
+			<div class="panel-body alert alert-success papeterie-description">
+				<h3 class="label label-default">{{ 'IMPRIMERIE.OFFSET.TITLE' | translate }}</h3>
+				<p>{{ 'IMPRIMERIE.OFFSET.DESCRIPTION' | translate }}</p><br />
+				<h3 class="label label-default">{{ 'IMPRIMERIE.PREPRESSE.TITLE' | translate }}</h3>
+				<p>{{ 'IMPRIMERIE.PREPRESSE.DESCRIPTION' | translate }}</p><br />
+				<h3 class="label label-default">{{ 'IMPRIMERIE.NUMERIQUE.TITLE' | translate }}</h3>
+				<p>{{ 'IMPRIMERIE.NUMERIQUE.DESCRIPTION' | translate }}</p>
+			</div>
+		</div>	
+	</div>
+
+	<!-- inject:time -->
+	<!-- endinject -->
+
+	<!-- inject:address -->
+	<!-- endinject -->
+
+</div>
