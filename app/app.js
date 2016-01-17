@@ -10,10 +10,8 @@
    'olippDirectives',
    'olippFilters',
    'olippControllers',
-   'olippServices'
+   'faucheryServices'
  ]);
-
- var olippServices = angular.module('olippServices', ['ngResource']);
 
  olippApp.config(['$routeProvider', 'blockUIConfig', '$translateProvider',
    function($routeProvider, blockUIConfig, $translateProvider) {

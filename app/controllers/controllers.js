@@ -1,7 +1,7 @@
 var olippControllers = angular.module('olippControllers', []);
 
-olippControllers.controller('OlippContactCtrl', ['$scope', 'blockUI', 'blockUIConfig', 'ngNotify', 'dataWebServices', 
-  function($scope, blockUI, blockUIConfig, ngNotify, dataWebServices) {
+olippControllers.controller('OlippContactCtrl', ['$scope', 'blockUI', 'blockUIConfig', 'ngNotify', 'faucheryServices',
+  function($scope, blockUI, blockUIConfig, ngNotify, faucheryServices) {
 
   $scope.resetForm = function() {
     $scope.contact.lastname = undefined; 
@@ -9,6 +9,7 @@ olippControllers.controller('OlippContactCtrl', ['$scope', 'blockUI', 'blockUICo
     $scope.contact.email = undefined;
     $scope.contact.company = undefined;
     $scope.contact.telephone = undefined;
+    $scope.contact.subject = undefined;
     $scope.contact.message = undefined; 
   }
 
@@ -25,34 +26,28 @@ olippControllers.controller('OlippContactCtrl', ['$scope', 'blockUI', 'blockUICo
 
     ngNotify.addType('noticeFaucherySuccess', 'notice-fauchery-success');
 
-    if($scope.company == undefined) $scope.company = "";
-    if($scope.telephone == undefined) $scope.telephone = ""; 
-    if($scope.message == undefined) $scope.message = "";
+    if($scope.contact.company == undefined) $scope.contact.company = "";
+    if($scope.contact.telephone == undefined) $scope.contact.telephone = ""; 
 
     // Block the user interface
     blockUIConfig.message = 'Envoi du mail en cours...';
     blockUI.start();
 
-    dataWebServices.sendMail($scope.contact.lastname, 
-                             $scope.contact.firstname, 
-                             $scope.contact.email,
-                             $scope.contact.company,
-                             $scope.contact.telephone,
-                             $scope.contact.message).
-                          success(function(results, status, headers, config) {  
-                                  // Unblock the user interface
-                                  blockUI.stop(); 
-                                  $scope.resetForm();
-                                  ngNotify.set(results.message, 'noticeFaucherySuccess');
-                                  console.log(results);                                                                                        
-                          }).
-                          error(function(results, status, headers, config) {                                  
-                                  // Unblock the user interface
-                                  blockUI.stop(); 
-                                  ngNotify.set(results.message, 'error');
-                                  console.log(results);
-                          });
-                        };
+    faucheryServices.sendMail($scope.contact)
+                        .success(function(data){
+                            console.log(data);
+                            if (data.success) { //success comes from the return json object
+                              // Unblock the user interface
+                              blockUI.stop(); 
+                              $scope.resetForm();
+                              ngNotify.set(data.message, 'noticeFaucherySuccess');
+                            } else {
+                              // Unblock the user interface
+                              blockUI.stop(); 
+                              ngNotify.set(data.message, 'error');
+                            }
+                        });
+    };
 
 }]);
 

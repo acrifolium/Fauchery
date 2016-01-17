@@ -123,13 +123,16 @@
 		"FIELD_LASTNAME": "Nom",
 		"REQUIRED_FIELD_LASTNAME": "Votre nom est requis.",
 		"FIELD_FIRSTNAME": "Prénom",
-		"REQUIRED_FIELD_FIRSTAME": "Votre prénom est requis.",
+		"REQUIRED_FIELD_FIRSTNAME": "Votre prénom est requis.",
 		"FIELD_MAIL": "Email",
 		"REQUIRED_FIELD_MAIL": "Votre E-mail est requis.",
 		"VALID_FIELD_MAIL": "Ceci n'est pas un E-mail valide. Merci d'entrer un E-mail valide.",
 		"FIELD_COMPANY": "Société",
 		"FIELD_PHONE": "Téléphone",
+		"FIELD_SUBJECT": "Objet",
+		"REQUIRED_FIELD_SUBJECT": "L'objet du mail est requis.",
 		"FIELD_MESSAGE": "Message",
+		"REQUIRED_FIELD_MESSAGE": "Le message est requis.",
 		"BUTTON": "Envoyer"
 	}
 }
