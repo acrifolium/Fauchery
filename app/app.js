@@ -54,7 +54,7 @@
    }])
    .run(['$rootScope', '$location', '$translate',
     function($rootScope, $location, $translate){
- 
+
       // Manage Dashboard Movies
       $rootScope.DashMovies = [];
       $translate('DASHBOARD.MOVIES.ONE').then(function (translation) {
