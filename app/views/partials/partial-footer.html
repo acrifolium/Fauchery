@@ -1,38 +1,37 @@
-<footer>
-	<div class="footer">
-		<div class="container-fluid">
+<div class="container footer">
+	<div class="row">
 
-				<div class="col-xs-6 col-sm-4 footer-border footer-logo">
-					<img class="img-thumbnail" src="img/footer/logo.png"/>
-					<br/><br/><br/><p>&nbsp;</p>
-				</div>
-
-				<div class="col-xs-6 col-sm-4 footer-border">
-					<aside><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>{{ 'CONFIG.ADDRESS.HEADQUARTER' | translate }}</span></h3>		
-						<ul class="footer-ul">
-							<li><span class="glyphicon glyphicon-home glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.HEADQUARTER' | translate}}</li>
-							<li class=" footer-address">{{ 'CONFIG.ADDRESS.FIRSTLINE' | translate}}</li>
-							<li class=" footer-address">{{ 'CONFIG.ADDRESS.SECONDLINE' | translate}} {{ 'CONFIG.ADDRESS.POSTALCODE' | translate}} {{ 'CONFIG.ADDRESS.CITY' | translate}}</li>
-							<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.TELEPHONE' | translate}}</li>
-							<li><span class="glyphicon glyphicon-copy glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.FAX' | translate}}</li>
-							<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.MAIL' | translate}}</li>
-						</ul>
-					</aside>
-				</div>
-
-				<div class="col-xs-6 col-sm-4 footer-text">
-					<aside ><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>{{ 'CONFIG.CEO.TITLE' | translate }}</span></h3>			
-						<ul class="footer-ul">
-							<li><span class="glyphicon glyphicon-user glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.NAME' | translate}}</li>
-							<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.TELEPHONE' | translate}}</li>
-							<li><span class="glyphicon glyphicon-phone glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.PORTABLE' | translate}}</li>
-							<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.MAIL' | translate}}</li>
-						</ul>
-					</aside>			
-				</div>
+		<div class="col-xs-12 col-sm-4 col-lg-4 footer-logo">
+			<img class="img-thumbnail" src="img/footer/logo.png"/>
+			<br/><br/><br/><p>&nbsp;</p>
 		</div>
 
-		<span class="footer-copyright">Copyright © {{date | date:'yyyy'}} - {{'CONFIG.HEADQUARTER' | translate}}</span> 
+		<div class="col-xs-12 col-sm-4 col-lg-4">
+			<aside><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>{{ 'CONFIG.ADDRESS.HEADQUARTER' | translate }}</span></h3>		
+				<ul class="footer-ul">
+					<li><span class="glyphicon glyphicon-home glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.HEADQUARTER' | translate}}</li>
+					<li class=" footer-address">{{ 'CONFIG.ADDRESS.FIRSTLINE' | translate}}</li>
+					<li class=" footer-address">{{ 'CONFIG.ADDRESS.SECONDLINE' | translate}} {{ 'CONFIG.ADDRESS.POSTALCODE' | translate}} {{ 'CONFIG.ADDRESS.CITY' | translate}}</li>
+					<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.TELEPHONE' | translate}}</li>
+					<li><span class="glyphicon glyphicon-copy glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.FAX' | translate}}</li>
+					<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.MAIL' | translate}}</li>
+				</ul>
+			</aside>
+		</div>
 
+		<div class="col-xs-12 col-sm-4 col-lg-4">
+			<aside ><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>{{ 'CONFIG.CEO.TITLE' | translate }}</span></h3>			
+				<ul class="footer-ul">
+					<li><span class="glyphicon glyphicon-user glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.NAME' | translate}}</li>
+					<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.TELEPHONE' | translate}}</li>
+					<li><span class="glyphicon glyphicon-phone glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.PORTABLE' | translate}}</li>
+					<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.MAIL' | translate}}</li>
+				</ul>
+			</aside>			
+		</div>
 	</div>
-</footer>
+
+	<div class="row">
+		<span class="footer-copyright">Copyright © {{date | date:'yyyy'}} - {{'CONFIG.HEADQUARTER' | translate}}</span> 
+	</div>
+</div>
