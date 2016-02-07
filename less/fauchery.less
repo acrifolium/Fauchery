@@ -44,77 +44,36 @@
 
 body {
 	.font-body;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
-.left-side{
-	width: 15%;
-	float: left;
-	border-style: solid;
-	border-color: transparent;
-}
-
-.center-side{
-	width: 70%;
-	float: left;
-}
-
-.right-side{
-	width: 15%;
-	float: left;
-	border-style: solid;
-	border-color: transparent;
-}
-
-.header-banner-top{
-	height: 100px;
+.logo{
+	width: 100%;
 	background-color: @green-fauchery-color;
-}
-
-.header-logo{
-	float: left;
-}
-
-.header-apluspapeterie{
-	float: right;
-	padding-top: 30px;
-	padding-right: 30px;
-}
-
-.header-apluspapeterie a{
-	color: white;
-}
-
-.header-apluspapeterie a img{
-	height: 40px;
-	width: 40px;
-}
-
-.header-apluspapeterie a span{
-	margin-left: 5px;
-	font-style: oblique;
+	border-bottom: solid 2vw @green-light-fauchery-color;
+	.img-logo {
+		float:left;
+		max-width: 25vw;
+	}
+	.link-apluspapeterie {
+		float:right;
+		max-width: 7vw;
+	}
 }
 
 .papeterie-apluspapeterie{
-
-}
-
-.papeterie-apluspapeterie a{
-	color: inherit;
-}
-
-.papeterie-apluspapeterie img{
-	height: 40px;
-	width: 40px;
-}
-
-.papeterie-apluspapeterie span{
-	margin-left: 5px;
-	font-style: oblique;
-}
-
-.header-banner-bottom{
-	height:20px;
-	background-color: @green-light-fauchery-color;
+	a{
+		color: inherit;
+	}
+	img{
+		height: 40px;
+		width: 40px;
+	}
+	span{
+		margin-left: 5px;
+		font-style: oblique;
+	}
 }
 
 .banniere-header{
@@ -187,20 +146,12 @@ body {
 .footer{
 	background-color: @green-fauchery-color;
 	color: white;
-}
-
-.footer-border{
-	border-right: solid 1px white;
-	height: 180px;	
+	width: 100%;
 }
 
 .footer-logo{
 	text-align: center;
 	padding-top: 20px;
-}
-
-.footer-text{
-	padding-left: 40px;
 }
 
 .footer-address{
@@ -237,6 +188,12 @@ body {
 	.font-panel-title;
 }
 
+.title-email {
+	@media screen and (max-width: 418px) {
+		font-size: 4vw;
+	}
+}
+
 .label-horaire {
    /* display: inline;*/
     padding: 0.2em 0.6em 0.3em;
@@ -250,15 +207,30 @@ body {
     border-radius: 0.25em;
 }
 
-.container .jumbotron, .container-fluid .jumbotron{
-	padding: 2px;
-	margin-bottom: 0px;
-}
-
-.container .jumbotron, .container-fluid .jumbotron p{
-	text-align: justify;
-	padding: 5px 10px 0px 10px;
-	font-size: 14px;
+.container {
+	.jumbotron {
+		padding-top: 2px;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+		margin-bottom: 0px;
+		img {
+			width: 100%;
+		}
+		p {
+			text-align: justify;
+			padding: 5px 10px 0px 10px;
+			font-size: 14px;
+		}
+		.btn {
+			margin-left: 5px;
+			margin-bottom: 5px;
+		}
+		@media screen and (min-width: 768px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
 }
 
 .panel-body-service{
@@ -321,4 +293,18 @@ body {
 
 .notice-fauchery-success {
 	background-color: @green-fauchery-color;
+}
+
+.img-family {
+	img {
+		display: block;
+    	margin-left: auto;
+    	margin-right: auto
+	}
+}
+
+.map {
+	padding: 5px;
+	width: 100%;
+	height: 100%;
 }

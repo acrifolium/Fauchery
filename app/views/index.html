@@ -41,33 +41,30 @@
 </head>
 <body>
 
-  <div class="left-side"></div>
+  <header>   
 
-  <div class="center-side">
-    <header>   
+    <!-- inject:header -->
+    <!-- endinject -->
 
-      <!-- inject:header -->
-      <!-- endinject -->
+    <!-- inject:navbar -->
+    <!-- endinject -->
 
-      <!-- inject:navbar -->
-      <!-- endinject -->
+    <!-- inject:carousel -->
+    <!-- endinject -->
 
-      <!-- inject:carousel -->
-      <!-- endinject -->
+  </header>
 
-    </header>
-
-    <div class="view-container">
-      <div ng-view class="view-frame">
-      </div>
+  <div class="view-container">
+    <div ng-view class="view-frame">
     </div>
+  </div>
+
+  <footer>
 
     <!-- inject:footer -->
     <!-- endinject -->
-
-  </div>
-
-  <div class="right-side"></div>
+  
+  </footer>
 
 </body>
 </html>
