@@ -11,8 +11,9 @@
     "url": "git+https://github.com/acrifolium/OlippFauchery.git"
   },
   "keywords": [
-    "Mode",
-    "AngularJS"
+    "ModeJs",
+    "AngularJS",
+    "ES6"
   ],
   "author": "acrifolium",
   "license": "ISC",
@@ -20,27 +21,38 @@
     "url": "https://github.com/acrifolium/OlippFauchery/issues"
   },
   "homepage": "https://github.com/acrifolium/OlippFauchery#readme",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-ui-router": "^0.4.2",
+    "angular-resource": "^1.6.2",
+    "angular-sanitize": "^1.6.2",
+    "angular-block-ui": "^0.2.2",
+    "angular-translate": "^2.13.1",
+    "angular-translate-loader-url": "^2.13.1",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "ng-notify": "^0.7.1",
+    "font-awesome": "^4.7.0"
+  },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "bower": "^1.7.2",
-    "rimraf": "^2.4.4",
+    "gulp": "^3.9.1",
+    "rimraf": "^2.5.4",
     "minimist": "^1.2.0",
-    "merge-stream": "^1.0.0",
-    "gulp-less": "^3.0.5",
-    "gulp-watch": "^4.3.5",
-    "gulp-template": "^3.1.0",
-    "gulp-minify-css": "^1.2.2",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-plumber": "^1.0.1",
+    "merge-stream": "^1.0.1",
+    "gulp-less": "^3.3.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-template": "^4.0.0",
+    "gulp-clean-css": "^3.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-watch-less": "^1.0.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-uglify": "^1.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^2.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-inject": "^3.0.0",
-    "gulp-util": "^3.0.7",
-    "gulp-cssnext": "^1.0.1",
-    "gulp-bower": "^0.0.11",
-    "gulp-if": "^2.0.0"
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-util": "^3.0.8",
+    "gulp-postcss": "^6.3.0",
+    "gulp-if": "^2.0.2"
   } 
 }
