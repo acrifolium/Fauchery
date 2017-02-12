@@ -1,6 +1,6 @@
-﻿var rimraf = require("rimraf")
-var paths = require("../paths")
+﻿const rimraf = require('rimraf');
+const config = require('./config');
 
 module.exports = function(){
-  rimraf.sync(paths.dist.public)
-}
+  rimraf.sync(config.dist.path)
+};
