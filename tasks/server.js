@@ -3,7 +3,7 @@ const express = require('express');
 module.exports = function(){
     var app = express();
 
-    app.get('/', function (req, res) {
+    app.get('/api/token', function (req, res) {
         res.send({
             name: "olivier",
             test: "coucou"
