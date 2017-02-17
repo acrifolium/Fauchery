@@ -1,4 +1,4 @@
-var olippApp = angular.module('olippApp', [
+var olippApp = angular.module('app', [
    'ngRoute',
    'blockUI',
    'ngNotify',
@@ -8,7 +8,7 @@ var olippApp = angular.module('olippApp', [
    'faucheryServices'
  ]);
 
- olippApp.config(function($routeProvider, blockUIConfig) {
+ app.config(function($routeProvider, blockUIConfig) {
  
     $routeProvider
       .when('', {

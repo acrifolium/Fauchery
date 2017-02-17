@@ -10,6 +10,7 @@ const inject = require('./tasks/inject');
 const externalCss = require('./tasks/externalCss');
 const less = require('./tasks/less');
 const assets = require('./tasks/assets');
+const server = require('./tasks/server');
 // const browserSync = require('./tasks/browser-sync');
 // const api = require('./tasks/api');
 
@@ -18,7 +19,7 @@ gulp.task('externalJs', externalJs);
 gulp.task('javascript', javascript);
 gulp.task('less', less);
 gulp.task('assets', assets);
-
+gulp.task('server', server);
 // gulp.task('api', api);
 // gulp.task('js-watch', ['javascript'], function (done) {
 //     browserSync.reload();
@@ -29,7 +30,8 @@ gulp.task('serve', function(){
     let options = {
         environment: 'dev',
         minify: false
-    }; 
+    };
+    server();
     clean();
     externalJs(options);
     javascript(options);
