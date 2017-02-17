@@ -1,48 +1,30 @@
-﻿var gulp = require("gulp")
-var opts = require("./options")
-var util = require("gulp-util")
-var plumber = require("gulp-plumber")
-var cssnext = require("gulp-cssnext")
-var autoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var less = require('gulp-less');
-var minify = require('gulp-minify-css');
-var rename = require('gulp-rename');
-var path = require('path');
-var merge = require('merge-stream');
-var paths = require("../paths")
-var bundleConfig = require("../bundleConfig")
+﻿const gulp = require("gulp")
+const concat = require('gulp-concat');
+const less = require('gulp-less');
+const cleanCSS = require('gulp-clean-css');
+const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
+const pump = require('pump');
+const gulpif = require('gulp-if');
 
-/**
- * task stylesheets
- *
- * cssnext -> css
- */
-module.exports = function () {
+const config = require('./config');
 
-    // Dist local stylesheets
-    var localCss = gulp.src(paths.sources.stylesheets)
-            .pipe(opts.plumber ? plumber() : util.noop())
-            .pipe(less({
-                paths: [path.join(__dirname, 'less', 'includes')]
-            }))
-            .pipe(autoprefixer())
-            .pipe(cssnext({ sourcemap: false }))
-            .pipe(concat('fauchery.css'))
-            .pipe(minify())
-            .pipe(gulp.dest(paths.dist.stylesheets))
-
-    // Dist external stylesheets
-    var libCss = gulp.src(bundleConfig.cssExternal, { cwd: paths.sources.bower })
-        .pipe(opts.plumber ? plumber() : util.noop())
-            .pipe(less({
-                paths: [path.join(__dirname, 'less', 'includes')]
-            }))
-            .pipe(autoprefixer())
-            .pipe(cssnext({ sourcemap: false }))
-            .pipe(gulp.dest(paths.dist.stylesheets))
-
-    return merge(localCss, libCss);
-
-    /*return merge(localCss);*/
+module.exports = function (options) {
+    return pump([
+        gulp.src(config.src.less),
+        sourcemaps.init(),
+        less(),   
+        concat(config.naming.nameAllCombinedCss),
+        gulpif(options.minify, cleanCSS({debug: true}, function(details) {
+            console.log(details.name + ': ' + details.stats.originalSize);
+            console.log(details.name + ': ' + details.stats.minifiedSize);
+        })),
+        gulpif(options.minify, rename(config.naming.nameAllCombinedMinifyCss)),
+        sourcemaps.write('.'),
+        gulp.dest(config.dist.libs)
+    ], function(err) {
+        if (err) {
+            console.log('Less', err);
+        }        
+    });
 }

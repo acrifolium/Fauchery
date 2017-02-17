@@ -9,18 +9,17 @@ const rename = require('gulp-rename');
 const config = require('./config');
 
 module.exports = function(options){
-    // External src js library
-    pump([
+    return pump([
         gulp.src(config.externalJs.map(elt => options.environment === 'dev' ? elt.dev : elt .prod)),
         sourcemaps.init(),       
         concat(config.naming.nameAllCombinedHeadJs),
         gulpif(options.minify, uglify()),
         gulpif(options.minify, rename(config.naming.nameAllCombinedHeadMinifyJs)),
         sourcemaps.write('.'),
-        gulp.dest(config.dist.path),
+        gulp.dest(config.dist.libs),
     ], function(err) {
         if (err) {
-            console.log('pipe finished', err);
+            console.log('External Js', err);
         }        
     });
 };

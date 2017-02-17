@@ -1,33 +1,60 @@
-﻿var gulp = require("gulp")
-var merge = require('merge-stream');
-var imagemin = require('gulp-imagemin');
-var paths = require("../paths")
-var bundleConfig = require("../bundleConfig")
+﻿const gulp = require("gulp")
+const imagemin = require('gulp-imagemin');
+const pump = require('pump');
+const gulpif = require('gulp-if');
+const htmlmin = require('gulp-htmlmin');
+const flatten = require('gulp-flatten');
 
-/**
- * task assets
- *
- * copies assets contents in `dist/`
- */
-module.exports = function () {
-    var assets = gulp.src(paths.sources.assets)
-                     .pipe(gulp.dest(paths.dist.assets))
+const config = require('./config');
 
-    var api = gulp.src(paths.sources.api)
-                  .pipe(gulp.dest(paths.dist.api))
+module.exports = function (options) {
+    pump([
+        gulp.src(config.src.html),
+        flatten(),
+        gulpif(options.minify, htmlmin({collapseWhitespace: true})),
+        gulp.dest(config.dist.path,{ base: '.'})
+    ], function(err) {
+        if (err) {
+            console.log('Html', err);
+        }
+    });
 
-    var images = gulp.src(paths.sources.images)
-			         .pipe(imagemin())
-			         .pipe(gulp.dest(paths.dist.images))
+    pump([
+        gulp.src(config.src.img),
+        gulpif(options.minify, imagemin()),
+        gulp.dest(config.dist.assets)
+    ], function(err) {
+        if (err) {
+            console.log('Image', err);
+        }
+    });
 
-    var fonts = gulp.src(paths.sources.fonts)
-                    .pipe(gulp.dest(paths.dist.fonts))
+	pump([
+        gulp.src(config.src.doc),
+        gulp.dest(config.dist.assets)
+    ], function(err) {
+        if (err) {
+            console.log('Document', err);
+        }
+    });
 
-    var externalFonts = gulp.src(bundleConfig.externalFonts, { cwd: paths.sources.bower })
-                    .pipe(gulp.dest(paths.dist.fonts))
+	pump([
+        gulp.src(config.src.fonts),
+        gulp.dest(config.dist.fonts)
+    ], function(err) {
+        if (err) {
+            console.log('Fonts', err);
+        }
+    });
 
-    var app_data = gulp.src(paths.sources.app_data)
-                    .pipe(gulp.dest(paths.dist.app_data))
-          
-    return merge(assets, api, images, fonts, externalFonts, app_data);
+	pump([
+        gulp.src(config.externalFonts),
+        gulp.dest(config.dist.fonts)
+    ], function(err) {
+        if (err) {
+            console.log('External Fonts', err);
+        }
+    });
+
+    return;
 }

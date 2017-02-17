@@ -6,8 +6,10 @@ module.exports = {
         prod: "http://www.fauchery.fr/"        
     },
     naming: {
+        nameAllCombinedHeadCss: "all.head.css",
+        nameAllCombinedHeadMinifyCss: "all.head.min.css",
         nameAllCombinedCss: "all.css",
-        nameAllCombinedminifyCss: "all.min.css",
+        nameAllCombinedMinifyCss: "all.min.css",
         nameAllCombinedHeadJs: "all.head.js",
         nameAllCombinedHeadMinifyJs: "all.head.min.js",
         nameAllCombinedJs: "all.js",
@@ -15,15 +17,16 @@ module.exports = {
     },
     src: {
         root: "./src/index.html",
-        html : "./src/**/*.html",
+        html : "./src/page/**/*.html",
         js: "./src/**/*.js",
         less : "./src/**/*.less",
-        assets: "./src/assets/**/*.*",
+        img: "./src/assets/**/*.{jpeg,JPEG,jpg,JPG,pdf,PDF,png,PNG,ico}",
+        doc: "./src/assets/**/*.{pdf,PDF}",
         fonts: "./src/fonts/**/*.{ttf,woff,woff2,eof,svg}",
         api: ["./api/**/*.{php,xml,}", "./api/.htaccess"]
     },
     externalFonts: [
-        ".node_modules/font-awesome/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}",
+        "./node_modules/font-awesome/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}",
         "./node_modules/bootstrap/dist/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}"
         ],
     externalCss: [
@@ -50,19 +53,19 @@ module.exports = {
             prod: "./node_modules/angular/angular.min.js"
         },
         {
-            dev: "./node_modules/angular-ui-router/release/angular-ui-router.js",
-            prod: "./node_modules/angular-ui-router/release/angular-ui-router.min.js"
+            dev: "./node_modules/angular-route/angular-route.js",
+            prod: "./node_modules/angular-route/angular-route.min.js"
         },
         {
-            dev: "./node_modules/angular-resource/angular.resource.js",
+            dev: "./node_modules/angular-resource/angular-resource.js",
             prod: "./node_modules/angular-resource/angular-resource.min.js"
         },
         {
-            dev: "./node_modules/angular-block-ui/angular-block-ui.js",
-            prod: "./node_modules/angular-block-ui/angular-block-ui.min.js"
+            dev: "./node_modules/angular-block-ui/dist/angular-block-ui.js",
+            prod: "./node_modules/angular-block-ui/dist/angular-block-ui.min.js"
         },
         {
-            dev: "./node_modules/src/scripts/ng-notify.js",
+            dev: "./node_modules/ng-notify/src/scripts/ng-notify.js",
             prod: "./node_modules/ng-notify/dist/ng-notify.min.js"
         },
         {
@@ -76,6 +79,7 @@ module.exports = {
     ],
     dist: {
         path: "./dist/",
+        libs: "./dist/libs",
         assets: "./dist/assets/",
         api: "./dist/api/",
         fonts: "./dist/fonts/",

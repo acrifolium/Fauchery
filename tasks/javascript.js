@@ -10,7 +10,7 @@ const gulpif = require('gulp-if');
 const config = require('./config');
 
 module.exports = function(options){
-    pump([
+    return pump([
         gulp.src(config.src.js),
         sourcemaps.init(),
         babel({presets: ['es2015']}),        
@@ -18,7 +18,7 @@ module.exports = function(options){
         gulpif(options.minify, uglify()),
         gulpif(options.minify, rename(config.naming.nameAllCombinedMinifyJs)),
         sourcemaps.write('.'),
-        gulp.dest(config.dist.path),
+        gulp.dest(config.dist.libs)
     ], function(err) {
         if (err) {
             console.log('pipe finished', err);

@@ -1,25 +1,17 @@
-﻿var gulp = require("gulp")
-var paths = require("../paths")
+﻿const gulp = require("gulp")
+const watch = require('gulp-watch');
 
-/**
- * watch task
- *
- * watch sources to dynamically build files whenever it's needed
- * used for development
- */
-module.exports = function () {
+const config = require("./config")
 
-    gulp.watch(paths.sources.scripts, ["scripts"])
+module.exports = function (options) {
 
-    gulp.watch(paths.sources.stylesheets, ["css"])
+    watch(config.src.js, function() {
+        javascript(options);
+    });
 
-    gulp.watch(paths.sources.images, ["assets"])
+    // watch(config.src.less, options, ["less"]);
 
-    gulp.watch(paths.sources.api, ["assets"])
+    // watch(config.src.img, options, ["assets"]);
 
-    gulp.watch(paths.sources.public, ["public"])
-
-    gulp.watch(paths.sources.app_data, ["assets"])
-
-    gulp.watch(paths.sources.partialsWatch, ["public"])
+    // watch(config.src.doc, options, ["assets"]);
 }
