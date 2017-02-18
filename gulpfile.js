@@ -11,6 +11,7 @@ const inject = require('./tasks/inject');
 const externalCss = require('./tasks/externalCss');
 const less = require('./tasks/less');
 const assets = require('./tasks/assets');
+const html = require('./tasks/html');
 const server = require('./tasks/server');
 // const api = require('./tasks/api');
 
@@ -19,6 +20,7 @@ gulp.task('externalJs', externalJs);
 gulp.task('javascript', javascript);
 gulp.task('less', less);
 gulp.task('assets', assets);
+gulp.task('html', html);
 gulp.task('server', server);
 // gulp.task('api', api);
 
@@ -35,6 +37,7 @@ gulp.task('serve', function(){
     externalCss(options);
     less(options);
     assets(options);
+    html(options);
     inject(options);
     browserSync({
         server: {
@@ -45,6 +48,7 @@ gulp.task('serve', function(){
 
     gulp.watch(config.src.js, ['javascript']).on('change', browserSync.reload);
     gulp.watch(config.src.less, ['less']).on('change', browserSync.reload);
+    gulp.watch(config.src.html, ['html']).on('change', browserSync.reload);
 });
 
 gulp.task('build', function(){
@@ -58,6 +62,7 @@ gulp.task('build', function(){
     externalCss(options);
     less(options);
     assets(options);
+    html(options);
     inject(options);
     browserSync({
         server: {

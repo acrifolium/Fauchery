@@ -10,17 +10,6 @@ const config = require('./config');
 
 module.exports = function (options) {
     pump([
-        gulp.src(config.src.html),
-        flatten(),
-        gulpif(options.minify, htmlmin({collapseWhitespace: true})),
-        gulp.dest(config.dist.path,{ base: '.'})
-    ], function(err) {
-        if (err) {
-            console.log('Html', err);
-        }
-    });
-
-    pump([
         gulp.src(config.src.img),
         gulpif(options.minify, imagemin()),
         gulp.dest(config.dist.assets)
