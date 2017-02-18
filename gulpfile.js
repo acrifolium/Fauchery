@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
+const watch = require('gulp-watch');
 
 const config = require("./tasks/config");
 
@@ -11,7 +12,6 @@ const externalCss = require('./tasks/externalCss');
 const less = require('./tasks/less');
 const assets = require('./tasks/assets');
 const server = require('./tasks/server');
-// const browserSync = require('./tasks/browser-sync');
 // const api = require('./tasks/api');
 
 gulp.task('clean', clean);
@@ -21,10 +21,7 @@ gulp.task('less', less);
 gulp.task('assets', assets);
 gulp.task('server', server);
 // gulp.task('api', api);
-// gulp.task('js-watch', ['javascript'], function (done) {
-//     browserSync.reload();
-//     done();
-// });
+
 
 gulp.task('serve', function(){  
     let options = {
@@ -45,7 +42,9 @@ gulp.task('serve', function(){
             index: "index.html"
         }
     });
+
     gulp.watch(config.src.js, ['javascript']).on('change', browserSync.reload);
+    gulp.watch(config.src.less, ['less']).on('change', browserSync.reload);
 });
 
 gulp.task('build', function(){
@@ -59,7 +58,13 @@ gulp.task('build', function(){
     externalCss(options);
     less(options);
     assets(options);
-    inject(options);       
+    inject(options);
+    browserSync({
+        server: {
+            baseDir: config.dist.path,
+            index: "index.html"
+        }
+    });      
 });
 
 gulp.task('default', ['serve']);

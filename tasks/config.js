@@ -17,11 +17,12 @@ module.exports = {
     },
     src: {
         root: "./src/index.html",
-        html : "./src/page/**/*.html",
+        html : "./src/**/*.html",
         js: "./src/**/*.js",
         less : "./src/**/*.less",
         img: "./src/assets/**/*.{jpeg,JPEG,jpg,JPG,pdf,PDF,png,PNG,ico}",
         doc: "./src/assets/**/*.{pdf,PDF}",
+        locales: "./src/**/locales/*.json",
         fonts: "./src/fonts/**/*.{ttf,woff,woff2,eof,svg}",
         api: ["./api/**/*.{php,xml,}", "./api/.htaccess"]
     },
@@ -53,8 +54,16 @@ module.exports = {
             prod: "./node_modules/angular/angular.min.js"
         },
         {
-            dev: "./node_modules/angular-route/angular-route.js",
-            prod: "./node_modules/angular-route/angular-route.min.js"
+            dev: "./node_modules/angular-sanitize/angular-sanitize.js",
+            prod: "./node_modules/angular-sanitize/angular-sanitize.min.js"
+        },
+        {
+            dev: "./node_modules/angular-ui-router/release/angular-ui-router.js",
+            prod: "./node_modules/angular-ui-router/release/angular-ui-router.min.js"
+        },
+        {
+            dev: "./node_modules/angular-animate/angular-animate.js",
+            prod: "./node_modules/angular-animate/angular-animate.min.js"
         },
         {
             dev: "./node_modules/angular-resource/angular-resource.js",
@@ -69,6 +78,18 @@ module.exports = {
             prod: "./node_modules/ng-notify/dist/ng-notify.min.js"
         },
         {
+            dev: "./node_modules/i18next/dist/umd/i18next.js",
+            prod: "./node_modules/i18next/dist/umd/i18next.min.js"
+        },
+        {
+            dev: "./node_modules/i18next-xhr-backend/i18nextXHRBackend.js",
+            prod: "./node_modules/i18next-xhr-backend/i18nextXHRBackend.min.js"
+        },
+        {
+            dev: "./node_modules/ng-i18next/dist/ng-i18next.js",
+            prod: "./node_modules/ng-i18next/dist/ng-i18next.min.js"
+        },
+        {
             dev: "./node_modules/jquery/dist/jquery.js",
             prod: "./node_modules/jquery/dist/jquery.min.js"
         },
@@ -81,6 +102,7 @@ module.exports = {
         path: "./dist/",
         libs: "./dist/libs",
         assets: "./dist/assets/",
+        locales: "./dist/locales/",
         api: "./dist/api/",
         fonts: "./dist/fonts/",
     }

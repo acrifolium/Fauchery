@@ -23,5 +23,5 @@ module.exports = function(options){
         if (err) {
             console.log('pipe finished', err);
         }        
-    });    
+    });
 };

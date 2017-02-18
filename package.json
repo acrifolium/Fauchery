@@ -23,14 +23,18 @@
   "homepage": "https://github.com/acrifolium/OlippFauchery#readme",
   "dependencies": {
     "angular": "^1.6.2",
-    "angular-route": "^1.6.2",
+    "angular-ui-router ": "^0.4.2",
+    "angular-animate": "^1.6.2",
     "angular-resource": "^1.6.2",
     "angular-sanitize": "^1.6.2",
     "angular-block-ui": "^0.2.2",
     "bootstrap": "^3.3.7",
     "jquery": "^3.1.1",
     "ng-notify": "^0.7.1",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "i18next": "^7.0.0",
+    "i18next-xhr-backend": "^1.3.0",
+    "ng-i18next": "^1.0.4"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -53,6 +57,7 @@
     "gulp-if": "^2.0.2",
     "gulp-htmlmin": "^3.0.0",
     "gulp-flatten": "^0.3.1",
+    "gulp-jsonminify": "^1.0.0",
     "express": "^4.14.1"
   } 
 }

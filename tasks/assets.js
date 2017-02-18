@@ -4,6 +4,7 @@ const pump = require('pump');
 const gulpif = require('gulp-if');
 const htmlmin = require('gulp-htmlmin');
 const flatten = require('gulp-flatten');
+const jsonminify = require('gulp-jsonminify');
 
 const config = require('./config');
 
@@ -56,5 +57,15 @@ module.exports = function (options) {
         }
     });
 
+    pump([
+        gulp.src(config.src.locales),
+        flatten(),
+        gulpif(options.minify, jsonminify()),
+        gulp.dest(config.dist.locales)
+    ], function(err) {
+        if (err) {
+            console.log('locales lng', err);
+        }
+    });
     return;
 }
