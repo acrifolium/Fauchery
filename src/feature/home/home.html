@@ -6,8 +6,7 @@
 				<div class="panel-heading"><span class="panel-title">{{ 'DASHBOARD.MAIN_TITLE' | i18next }}</span></div>
 				<div class="panel-body alert alert-success"><h4>{{ 'DASHBOARD.BODY_TITLE' | i18next }}</h4></div>
 
-				<!-- inject:carouselFauchery -->
-				<!-- endinject -->
+				<carousel-fauchery></carousel-fauchery>
 
 				<div class="panel-body">						
 					<aside>
@@ -24,11 +23,8 @@
 			</div>	
 		</div>
 
-		<!-- inject:time -->
-		<!-- endinject -->
-
-		<!-- inject:address -->
-		<!-- endinject -->
+		<time></time>
+		<address></address>
 	</div>
 
 	<div class="row">
@@ -39,7 +35,7 @@
 					<div class="jumbotron">
 						<img class="img-thumbnail" src="assets/dashboard/imprimerie-img.png" />
 						<p>{{ 'DASHBOARD.IMPRIMERIE.DESCRIPTION' | i18next }}</p>
-						<a class="btn btn-primary" href="#/service/2" role="button">{{ 'DASHBOARD.BUTTON_CAPTION' | i18next }}</a>
+						<a class="btn btn-primary" ui-sref="imprimerie" ui-sref-active="active" role="button">{{ 'DASHBOARD.BUTTON_CAPTION' | i18next }}</a>
 					</div>
 				</div>
 			</div>
@@ -52,7 +48,7 @@
 					<div class="jumbotron">
 						<img class="img-thumbnail" src="assets/dashboard/papeterie-img.png" />
 						<p>{{ 'DASHBOARD.PAPETERIE.DESCRIPTION' | i18next }}</p>
-						<a class="btn btn-primary" href="#/service/3" role="button">{{ 'DASHBOARD.BUTTON_CAPTION' | i18next }}</a>
+						<a class="btn btn-primary" ui-sref="papeterie" ui-sref-active="active" role="button">{{ 'DASHBOARD.BUTTON_CAPTION' | i18next }}</a>
 					</div>
 				</div>
 			</div>
@@ -65,7 +61,7 @@
 					<div class="jumbotron">
 						<img class="img-thumbnail" src="assets/dashboard/enseignes-img.png" />
 						<p>{{ 'DASHBOARD.ENSEIGNES.DESCRIPTION' | i18next }}</p>
-						<a class="btn btn-primary" href="#/service/4" role="button">{{ 'DASHBOARD.BUTTON_CAPTION' | i18next }}</a>
+						<a class="btn btn-primary" ui-sref="enseignes" ui-sref-active="active" role="button">{{ 'DASHBOARD.BUTTON_CAPTION' | i18next }}</a>
 					</div>
 				</div>
 			</div>			

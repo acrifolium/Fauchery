@@ -1,7 +1,5 @@
 class footerCtrl {
-    constructor () {
-        console.log('footer component');
-    }
+    constructor () {}
 }
 
 angular

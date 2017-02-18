@@ -1,7 +1,5 @@
 class headerCtrl {
-    constructor () {
-        console.log('header component');
-    }
+    constructor () {}
 }
 
 angular

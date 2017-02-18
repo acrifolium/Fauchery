@@ -8,25 +8,25 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>        
       </button>
-      <a class="navbar-brand" ng-href="#/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>    
+      <a class="navbar-brand" ui-sref="home" ui-sref-active="active"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>    
     </div>
 
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav">
           <li>
-            <a href="#/imprimerie">{{ 'NAVBAR.MENU_IMPRIMERIE' | translate }}</a>
+            <a ui-sref="imprimerie" ui-sref-active="active">{{ 'NAVBAR.MENU_IMPRIMERIE' | i18next }}</a>
           </li>
           <li>
-            <a href="#/papeterie">{{ 'NAVBAR.MENU_PAPETERIE' | translate }}</a>
+            <a ui-sref="papeterie" ui-sref-active="active">{{ 'NAVBAR.MENU_PAPETERIE' | i18next }}</a>
           </li>
           <li>
-            <a href="#/enseignes">{{ 'NAVBAR.MENU_ENSEIGNES' | translate }}</a>
+            <a ui-sref="enseignes" ui-sref-active="active">{{ 'NAVBAR.MENU_ENSEIGNES' | i18next }}</a>
           </li>
           <li>
-            <a href="#/movie">{{ 'NAVBAR.MENU_MOVIE' | translate }}</a>
+            <a ui-sref="movie" ui-sref-active="active">{{ 'NAVBAR.MENU_MOVIE' | i18next }}</a>
           </li>
           <li>
-            <a href="#/contact">{{ 'NAVBAR.MENU_CONTACT' | translate }}</a>
+            <a ui-sref="contact" ui-sref-active="active">{{ 'NAVBAR.MENU_CONTACT' | i18next }}</a>
           </li>
         </ul>
       </div>
