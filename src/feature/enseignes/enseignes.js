@@ -10,9 +10,10 @@ angular
     var enseignesState = {
     	name: 'enseignes',
     	url: '/enseignes',
-      templateUrl: 'enseignes.html'
+      templateUrl: 'enseignes.html',
+      controller: enseignesCtrl,
+      controllerAs: 'EnseignesCtrl'
     }
 		$stateProvider.state(enseignesState);
   })
-  .controller('enseignesCtrl', enseignesCtrl)
 ;

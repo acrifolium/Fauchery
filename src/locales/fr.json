@@ -1,6 +1,7 @@
 {
 	"BLOCKUI": {
-	    "DEFAULT_MESSAGE_LOADING": "Chargement"
+	    "DEFAULT_MESSAGE_LOADING": "Chargement",
+		"MAIL_SENDING": "Envoi du mail en cours..."
 	  },
 	"NAVBAR": {
 		"MENU_IMPRIMERIE": "IMPRIMERIE",

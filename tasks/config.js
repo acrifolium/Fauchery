@@ -14,10 +14,10 @@ module.exports = {
         nameAllCombinedHeadMinifyJs: "all.head.min.js",
         nameAllCombinedJs: "all.js",
         nameAllCombinedMinifyJs: "all.min.js"
-    },
+    },  
     src: {
         root: "./src/index.html",
-        html : "./src/**/*.html",
+        html : ['./src/**/*.html', '!./src/index.html'],
         js: "./src/**/*.js",
         less : "./src/**/*.less",
         img: "./src/assets/**/*.{jpeg,JPEG,jpg,JPG,pdf,PDF,png,PNG,ico}",

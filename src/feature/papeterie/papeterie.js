@@ -10,9 +10,10 @@ angular
     var papeterieState = {
     	name: 'papeterie',
     	url: '/papeterie',
-      templateUrl: 'papeterie.html'
+      templateUrl: 'papeterie.html',
+      controller: papeterieCtrl,
+      controllerAs: 'PapeterieCtrl'
     }
 		$stateProvider.state(papeterieState);
   })
-  .controller('papeterieCtrl', papeterieCtrl)
 ;

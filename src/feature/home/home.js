@@ -10,9 +10,10 @@ angular
     var homeState = {
     	name: 'home',
     	url: '/home',
-      templateUrl: 'home.html'
+      templateUrl: 'home.html',
+      controller: homeCtrl,
+      controllerAs: 'HomeCtrl'
     }
 		$stateProvider.state(homeState);
   })
-  .controller('homeCtrl', homeCtrl)
 ;

@@ -10,9 +10,10 @@ angular
     var imprimerieState = {
     	name: 'imprimerie',
     	url: '/imprimerie',
-      templateUrl: 'imprimerie.html'
+      templateUrl: 'imprimerie.html',
+      controller: imprimerieCtrl,
+      controllerAs: 'ImprimerieCtrl'
     }
 		$stateProvider.state(imprimerieState);
   })
-  .controller('imprimerieCtrl', imprimerieCtrl)
 ;

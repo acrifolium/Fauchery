@@ -4,12 +4,11 @@
 		<div class="panel panel-default">
 			<div class="panel-heading panel-center"><span class="panel-title title-email">{{ 'CONTACT_FORM.TITLE' | i18next }}</span></div>
 			<div class="panel-body">
-				
-				<form name="contactForm" ng-submit="Send(contactForm.$valid)" novalidate>
+				<form name="contactForm" ng-submit="ContactCtrl.send()" novalidate>
 
 					    <div class="form-group has-feedback" ng-class="{ 'has-error' : contactForm.lastname.$invalid && !contactForm.lastname.$pristine , 'has-success': contactForm.lastname.$valid}">
 					    	<label for="inputName">{{ 'CONTACT_FORM.FIELD_LASTNAME' | i18next }}<span class="required">*</span></label>
-					        <input type="text" name="lastname" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_LASTNAME' | i18next }}" ng-model="contact.lastname"  required />
+					        <input type="text" name="lastname" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_LASTNAME' | i18next }}" ng-model="ContactCtrl.contact.lastname"  required />
 					        <span ng-show="contactForm.lastname.$valid" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                             <span ng-show="contactForm.lastname.$invalid && !contactForm.lastname.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
 					        <div class="error-container" ng-show="contactForm.lastname.$invalid && !contactForm.lastname.$pristine">
@@ -22,7 +21,7 @@
 
 					    <div class="form-group has-feedback" ng-class="{ 'has-error' : contactForm.firstname.$invalid && !contactForm.firstname.$pristine, 'has-success': contactForm.firstname.$valid }">
 					        <label for="inputName">{{ 'CONTACT_FORM.FIELD_FIRSTNAME' | i18next }}<span class="required">*</span></label>
-					        <input type="text" name="firstname" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_FIRSTNAME' | i18next }}" ng-model="contact.firstname"  required />
+					        <input type="text" name="firstname" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_FIRSTNAME' | i18next }}" ng-model="ContactCtrl.contact.firstname"  required />
 					        <span ng-show="contactForm.firstname.$valid" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                             <span ng-show="contactForm.firstname.$invalid && !contactForm.firstname.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
 					        <div class="error-container" ng-show="contactForm.firstname.$invalid && !contactForm.firstname.$pristine">
@@ -35,7 +34,7 @@
 
 					    <div class="form-group has-feedback" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine, 'has-success': contactForm.email.$valid}">
 					        <label for="inputEmail">{{ 'CONTACT_FORM.FIELD_MAIL' | i18next }}<span class="required">*</span></label>
-					        <input type="email" name="email" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_MAIL' | i18next }}" ng-model="contact.email" required />
+					        <input type="email" name="email" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_MAIL' | i18next }}" ng-model="ContactCtrl.contact.email" required />
 					        <span ng-show="contactForm.email.$valid" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                             <span ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
 					        <div class="error-container" ng-show="contactForm.email.$invalid && !contactForm.email.$pristine">
@@ -51,17 +50,17 @@
 
 					    <div class="form-group">
 					        <label for="inputName">{{ 'CONTACT_FORM.FIELD_COMPANY' | i18next }}</label>
-					        <input type="text" name="company" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_COMPANY' | i18next }}" ng-model="contact.company" />		        
+					        <input type="text" name="company" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_COMPANY' | i18next }}" ng-model="ContactCtrl.contact.company" />		        
 					    </div>
 
 					    <div class="form-group">
 					        <label for="inputName">{{ 'CONTACT_FORM.FIELD_PHONE' | i18next }}</label>
-					        <input type="text" name="telephone" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_PHONE' | i18next }}" ng-model="contact.telephone" />		        
+					        <input type="text" name="telephone" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_PHONE' | i18next }}" ng-model="ContactCtrl.contact.telephone" />		        
 					    </div>
 
 					    <div class="form-group has-feedback" ng-class="{ 'has-error' : contactForm.subject.$invalid && !contactForm.subject.$pristine, 'has-success': contactForm.subject.$valid}">
 					        <label for="inputName">{{ 'CONTACT_FORM.FIELD_SUBJECT' | i18next }}<span class="required">*</span></label>
-					        <input type="text" name="subject" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_SUBJECT' | i18next }}" ng-model="contact.subject"  required />
+					        <input type="text" name="subject" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_SUBJECT' | i18next }}" ng-model="ContactCtrl.contact.subject"  required />
 					        <span ng-show="contactForm.subject.$valid" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                             <span ng-show="contactForm.subject.$invalid && !contactForm.subject.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
 					        <div class="error-container" ng-show="contactForm.subject.$invalid && !contactForm.subject.$pristine">
@@ -74,18 +73,19 @@
 
 					    <div class="form-group has-feedback" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine, 'has-success': contactForm.message.$valid}">
 					        <label for="inputName">{{ 'CONTACT_FORM.FIELD_MESSAGE' | i18next }}<span class="required">*</span></label>
-					        <textarea rows="4" name="message" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_MESSAGE' | i18next }}" ng-model="contact.message" required/>
+					        <textarea rows="4" name="message" tabindex="1" class="form-control" placeholder="{{ 'CONTACT_FORM.FIELD_MESSAGE' | i18next }}" ng-model="ContactCtrl.contact.message" required>
+					        </textarea>	
 					        <span ng-show="contactForm.message.$valid" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                             <span ng-show="contactForm.message.$invalid && !contactForm.message.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>		
 					        <div class="error-container" ng-show="contactForm.message.$invalid && !contactForm.message.$pristine">
-						    <small class="error" 
-						        ng-show="contactForm.message.$error.required">
-						        {{ 'CONTACT_FORM.REQUIRED_FIELD_MESSAGE' | i18next }}
-						    </small>
-						  </div>       
-					    </div>
+								<small class="error" 
+									ng-show="contactForm.message.$error.required">
+									{{ 'CONTACT_FORM.REQUIRED_FIELD_MESSAGE' | i18next }}
+								</small>
+						  	</div>       					      
+						</div>
 
-					    <button type="submit" class="btn btn-primary btnContact" ng-disabled="contactForm.$invalid">{{ 'CONTACT_FORM.BUTTON' | i18next }}</button>
+						<button type="submit" class="btn btn-primary btnContact" ng-disabled="contactForm.$invalid">{{ 'CONTACT_FORM.BUTTON' | i18next }}</button>
 				</form>
 			</div>
 		</div>
