@@ -13,7 +13,8 @@ const less = require('./tasks/less');
 const assets = require('./tasks/assets');
 const html = require('./tasks/html');
 const server = require('./tasks/server');
-// const api = require('./tasks/api');
+const apiDev = require('./tasks/apiDev');
+const api = require('./tasks/api');
 
 gulp.task('clean', clean);
 gulp.task('externalJs', externalJs);
@@ -22,7 +23,7 @@ gulp.task('less', less);
 gulp.task('assets', assets);
 gulp.task('html', html);
 gulp.task('server', server);
-// gulp.task('api', api);
+gulp.task('api:dev', apiDev);
 
 
 gulp.task('serve', function(){  
@@ -39,6 +40,7 @@ gulp.task('serve', function(){
     assets(options);
     html(options);
     inject(options);
+    apiDev();
     browserSync({
         server: {
             baseDir: config.dist.path,
@@ -49,6 +51,7 @@ gulp.task('serve', function(){
     gulp.watch(config.src.js, ['javascript']).on('change', browserSync.reload);
     gulp.watch(config.src.less, ['less']).on('change', browserSync.reload);
     gulp.watch(config.src.html, ['html']).on('change', browserSync.reload);
+    gulp.watch(config.src.api, ['api:dev']);
 });
 
 gulp.task('build', function(){
@@ -64,6 +67,7 @@ gulp.task('build', function(){
     assets(options);
     html(options);
     inject(options);
+    api();
     browserSync({
         server: {
             baseDir: config.dist.path,

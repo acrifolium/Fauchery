@@ -104,6 +104,7 @@ module.exports = {
         assets: "./dist/assets/",
         locales: "./dist/locales/",
         api: "./dist/api/",
+        apiDev: "/var/www/html/api",
         fonts: "./dist/fonts/",
     }
 }

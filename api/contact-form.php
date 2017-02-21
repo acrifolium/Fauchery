@@ -226,3 +226,5 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['ema
     echo json_encode($data);
 
 }
+
+?>
