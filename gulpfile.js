@@ -41,16 +41,19 @@ gulp.task('serve', function(){
     html(options);
     inject(options);
     apiDev();
-    browserSync({
-        server: {
-            baseDir: config.dist.path,
-            index: "index.html"
-        }
-    });
+    // browserSync({
+    //     server: {
+    //         baseDir: config.dist.path,
+    //         index: "index.html"
+    //     }
+    // });
 
-    gulp.watch(config.src.js, ['javascript']).on('change', browserSync.reload);
-    gulp.watch(config.src.less, ['less']).on('change', browserSync.reload);
-    gulp.watch(config.src.html, ['html']).on('change', browserSync.reload);
+    // gulp.watch(config.src.js, ['javascript']).on('change', browserSync.reload);
+    // gulp.watch(config.src.less, ['less']).on('change', browserSync.reload);
+    // gulp.watch(config.src.html, ['html']).on('change', browserSync.reload);
+    gulp.watch(config.src.js, ['javascript']);
+    gulp.watch(config.src.less, ['less']);
+    gulp.watch(config.src.html, ['html']);
     gulp.watch(config.src.api, ['api:dev']);
 });
 

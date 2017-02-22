@@ -17,8 +17,7 @@ angular
           'ngAnimate',
           'ui.router',
           'jm.i18next',
-          'blockUI',
-          'ngNotify'])
+          'blockUI'])
   .config(function($stateProvider, $urlRouterProvider, blockUIConfig) {
   	// For any unmatched url, redirect to /state1 
     $urlRouterProvider.otherwise("/home");

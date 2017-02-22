@@ -1,3 +1,4 @@
+let dist = '/var/www/html/fauchery/';
 
 module.exports = {
     language: "fr",
@@ -36,10 +37,6 @@ module.exports = {
             prod: "./node_module/angular-block-ui/dist/angular-block-ui.min.css"
         },
         {
-            dev: "./node_module/ng-notify/src/styles/ng-notify.css",
-            prod: "./node_module/ng-notify/dist/ng-notify.min.css"
-        },
-        {
             dev: "./node_modules/bootstrap/dist/css/bootstrap.css",
             prod: "./node_modules/bootstrap/dist/css/bootstrap.min.css"
         },
@@ -74,10 +71,6 @@ module.exports = {
             prod: "./node_modules/angular-block-ui/dist/angular-block-ui.min.js"
         },
         {
-            dev: "./node_modules/ng-notify/src/scripts/ng-notify.js",
-            prod: "./node_modules/ng-notify/dist/ng-notify.min.js"
-        },
-        {
             dev: "./node_modules/i18next/dist/umd/i18next.js",
             prod: "./node_modules/i18next/dist/umd/i18next.min.js"
         },
@@ -99,12 +92,12 @@ module.exports = {
         }
     ],
     dist: {
-        path: "./dist/",
-        libs: "./dist/libs",
-        assets: "./dist/assets/",
-        locales: "./dist/locales/",
-        api: "./dist/api/",
-        apiDev: "/var/www/html/api",
-        fonts: "./dist/fonts/",
+        path: dist,
+        libs: dist + "libs",
+        assets: dist + "assets/",
+        locales: dist + "locales/",
+        api: dist + "api/",
+        apiDev: dist + "api/",
+        fonts: dist + "fonts/",
     }
 }

@@ -7,7 +7,9 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['ema
 
     //check if any of the inputs are empty
     if (empty($_POST['lastname']) || empty($_POST['firstname']) || empty($_POST['email']) || empty($_POST['subject']) || empty($_POST['message'])) {
-        $data = array('success' => false, 'message' => 'Merci de remplir le formulaire complètement.');
+        $data = 'Merci de remplir le formulaire complètement';
+        header('Content-Type: application/json');
+        http_response_code(400);
         echo json_encode($data);
         exit;
     }
@@ -138,7 +140,9 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['ema
 
     // Envoi du mail à l'imprimerie
     if(!$mail->send()) {
-        $data = array('success' => false, 'message' => 'Le message ne peut être envoyé. Erreur Mail: ' . $mail->ErrorInfo);
+        $data = 'Le message ne peut être envoyé. Erreur Mail: ' . $mail->ErrorInfo;
+        header('Content-Type: application/json');
+        http_response_code(400);
         echo json_encode($data);
         exit;
     }
@@ -212,17 +216,23 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['ema
 
     // Envoi du mail à l'internaute
     if(!$mail->send()) {
-        $data = array('success' => false, 'message' => 'Le message ne peut être envoyé. Erreur Mail: ' . $mail->ErrorInfo);
+        $data = 'Le message ne peut être envoyé. Erreur Mail: ' . $mail->ErrorInfo;
+        header('Content-Type: application/json');
+        http_response_code(400);
         echo json_encode($data);
         exit;
     }
 
-    $data = array('success' => true, 'message' => 'Merci! Nous avons envoyé votre message.');
+    $data = 'Merci! Nous avons envoyé votre message.';
+    header('Content-Type: application/json');
+    http_response_code(200);
     echo json_encode($data);
 
 } else {
 
-    $data = array('success' => false, 'message' => 'Merci de remplir le formulaire complètement.');
+    $data = 'Merci de remplir le formulaire complètement.';
+    header('Content-Type: application/json');
+    http_response_code(400);
     echo json_encode($data);
 
 }
