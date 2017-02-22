@@ -1,4 +1,4 @@
-let dist = '/var/www/html/fauchery/';
+let dist = './dist/';
 
 module.exports = {
     language: "fr",
@@ -33,10 +33,6 @@ module.exports = {
         ],
     externalCss: [
         {
-            dev: "./node_module/angular-block-ui/dist/angular-block-ui.css",
-            prod: "./node_module/angular-block-ui/dist/angular-block-ui.min.css"
-        },
-        {
             dev: "./node_modules/bootstrap/dist/css/bootstrap.css",
             prod: "./node_modules/bootstrap/dist/css/bootstrap.min.css"
         },
@@ -65,10 +61,6 @@ module.exports = {
         {
             dev: "./node_modules/angular-resource/angular-resource.js",
             prod: "./node_modules/angular-resource/angular-resource.min.js"
-        },
-        {
-            dev: "./node_modules/angular-block-ui/dist/angular-block-ui.js",
-            prod: "./node_modules/angular-block-ui/dist/angular-block-ui.min.js"
         },
         {
             dev: "./node_modules/i18next/dist/umd/i18next.js",

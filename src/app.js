@@ -16,12 +16,10 @@ angular
   .module('app', [
           'ngAnimate',
           'ui.router',
-          'jm.i18next',
-          'blockUI'])
-  .config(function($stateProvider, $urlRouterProvider, blockUIConfig) {
+          'jm.i18next'])
+  .config(function($stateProvider, $urlRouterProvider) {
   	// For any unmatched url, redirect to /state1 
-    $urlRouterProvider.otherwise("/home");
-    blockUIConfig.message = 'Loading';        
+    $urlRouterProvider.otherwise("/home");      
   })
 ;
 

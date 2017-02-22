@@ -1,8 +1,4 @@
 {
-	"BLOCKUI": {
-	    "DEFAULT_MESSAGE_LOADING": "Chargement",
-		"MAIL_SENDING": "Envoi du mail en cours..."
-	  },
 	"NAVBAR": {
 		"MENU_IMPRIMERIE": "IMPRIMERIE",
 		"MENU_PAPETERIE": "PAPETERIE",
@@ -118,6 +114,12 @@
 		"NINE": "http://www.youtube.com/embed/F4joTiKYNVY",
 		"TEN": "http://www.youtube.com/embed/sC0tzYQZ1EE",
 		"ELEVEN": "http://www.youtube.com/embed/PWS77zzwt2s"
+	},
+	"CONTACT": {
+		"SEND": {
+			"TITLE_SUCCESS": "Message envoyé",
+			"TITLE_ERROR":"Erreur dans l'envoi du message"
+		}
 	},
 	"CONTACT_FORM": {
 		"TITLE": "IMPRIMERIE@FAUCHERY.COM",

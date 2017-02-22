@@ -30,13 +30,12 @@ class contactService {
 }
 
 class contactCtrl {
-  constructor(blockUI, blockUIConfig, notifyService, contactService, $i18next) {
-    this.blockUI = blockUI;
-    this.blockUIConfig = blockUIConfig;
-    this.notifyService = notifyService;
+  constructor(contactService, $i18next,toaster) {
     this.contactService = contactService;
     this.$i18next = $i18next;
-      
+    this.toaster = toaster;
+
+    this.loading = false;
     this.initFormValue();    
   }
 
@@ -56,13 +55,17 @@ class contactCtrl {
     this.loading = true;
     this.contactService.send(this.contact)
     .then(response => {
-      console.log('response ctrl',response);
       this.loading = false;
+      let title = this.$i18next.t('CONTACT.SEND.TITLE_SUCCESS');
+      let message = response.data;
+      this.toaster.success(title, message);
       this.initFormValue();
       
     }, error => {
-      console.log('error ctrl',error.data);
       this.loading = false;
+      let title = this.$i18next.t('CONTACT.SEND.TITLE_ERROR');
+      let message = error.data;
+      this.toaster.danger(title, message);      
     })
   }
 }
