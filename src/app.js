@@ -15,11 +15,22 @@ window.i18next.init({
 angular
   .module('app', [
           'ngAnimate',
+          'ngCookies',
           'ui.router',
           'jm.i18next'])
   .config(function($stateProvider, $urlRouterProvider) {
   	// For any unmatched url, redirect to /state1 
     $urlRouterProvider.otherwise("/home");      
+  })
+  .run(function($rootScope, $cookies, $http) {
+    $rootScope.globals = $cookies.getObject('globals') || {};
+
+    if ($rootScope.globals.currentUser) {
+      $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
+    }
+
+    console.log('run - $rootScope', $rootScope.globals);
+    console.log('run - $http.defaults.headers.common[Authorization]', $http.defaults.headers.common['Authorization']);
   })
 ;
 

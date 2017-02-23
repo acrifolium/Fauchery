@@ -12,7 +12,7 @@ class contactService {
       url: this.serviceBase + 'contact-form.php',
       headers : { 
         'Content-Type': 'application/x-www-form-urlencoded'
-      } ,
+      },
       data: $.param(data)
     }
 
@@ -30,7 +30,7 @@ class contactService {
 }
 
 class contactCtrl {
-  constructor(contactService, $i18next,toaster) {
+  constructor(contactService, $i18next, toaster) {
     this.contactService = contactService;
     this.$i18next = $i18next;
     this.toaster = toaster;

@@ -63,6 +63,10 @@ module.exports = {
             prod: "./node_modules/angular-resource/angular-resource.min.js"
         },
         {
+            dev: "./node_modules/angular-cookies/angular-cookies.js",
+            prod: "./node_modules/angular-cookies/angular-cookies.min.js"
+        },
+        {
             dev: "./node_modules/i18next/dist/umd/i18next.js",
             prod: "./node_modules/i18next/dist/umd/i18next.min.js"
         },

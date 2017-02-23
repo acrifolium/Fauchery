@@ -1,6 +1,5 @@
 class homeCtrl {
     constructor() {
-        console.log('homeCtrl')
     }
 }
 

@@ -137,5 +137,19 @@
 		"FIELD_MESSAGE": "Message",
 		"REQUIRED_FIELD_MESSAGE": "Le message est requis.",
 		"BUTTON": "Envoyer"
+	},
+	"ADMIN": {
+		"LOGIN": {
+			"TITLE_SUCCESS": "Connection réussie",
+			"TITLE_ERROR": "Connection impossible"
+		}
+	},
+	"ADMIN_FORM": {
+		"TITLE": "CONNECTION",
+		"FIELD_ID": "Identifiant",
+		"FIELD_PASSWORD": "Password",
+		"REQUIRED_FIELD_ID": "L'identifiant est requis",
+		"REQUIRED_FIELD_PASSWORD": "Le password est requis",
+		"BUTTON": "Login"
 	}
 }
