@@ -5,7 +5,7 @@ class adminCtrl {
     this.toaster = toaster;
     this.$state = $state;
     this.$timeout = $timeout;
-
+    
     this.loading = false;
     this.initFormValue(); 
   }
@@ -28,7 +28,7 @@ class adminCtrl {
       this.toaster.success(title, message);
       this.initFormValue();
       this.authenticationService.SetCredentials(response.data);
-      this.$timeout(() => {this.$state.go('home')}, 3000);     
+      this.$timeout(() => {this.$state.go('home')}, 2000);    
     }, error => {
       this.loading = false;
       let title = this.$i18next.t('ADMIN.LOGIN.TITLE_ERROR');
@@ -46,7 +46,12 @@ angular
     	url: '/admin',
       templateUrl: 'admin.html',   
       controller: adminCtrl,
-      controllerAs: 'AdminCtrl'
+      controllerAs: 'AdminCtrl',
+      onEnter: function($rootScope, $state) {
+        if(angular.isDefined($rootScope.globals.currentUser)){
+          $state.go('home');
+        }
+	    }
     }
 		$stateProvider.state(adminState);
   })

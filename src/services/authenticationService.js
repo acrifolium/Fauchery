@@ -39,15 +39,15 @@ class authenticationService {
       });
     }, 2000);
     
+    
     return deferred.promise;
   }
 
 	logout() {
-
+    this.ClearCredentials();
 	}
 
   SetCredentials(data) { 
-		console.log('SetCredentials');
     this.$rootScope.globals = {
       currentUser: {
         username: data.username,
@@ -56,7 +56,7 @@ class authenticationService {
 				firstname: data.firstname
       }
     };
-		console.log('SetCredentials - $rootScope.globals', this.$rootScope.globals);
+
     // set default auth header for http requests
     this.$http.defaults.headers.common['Authorization'] = 'Basic ' + this.$rootScope.globals.currentUser.authdata;
  

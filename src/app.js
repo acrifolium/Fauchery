@@ -28,9 +28,6 @@ angular
     if ($rootScope.globals.currentUser) {
       $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
     }
-
-    console.log('run - $rootScope', $rootScope.globals);
-    console.log('run - $http.defaults.headers.common[Authorization]', $http.defaults.headers.common['Authorization']);
   })
 ;
 

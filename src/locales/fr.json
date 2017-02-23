@@ -151,5 +151,8 @@
 		"REQUIRED_FIELD_ID": "L'identifiant est requis",
 		"REQUIRED_FIELD_PASSWORD": "Le password est requis",
 		"BUTTON": "Login"
+	},
+	"ADMIN_NAVBAR": {
+		"LOGOUT": "Déconnexion"
 	}
 }
