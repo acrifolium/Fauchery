@@ -1,0 +1,70 @@
+<div class="container-fluid">
+
+	<div class="col-xs-12 col-sm-8 col-lg-8">
+		<div class="panel panel-default">
+			<div class="panel-heading panel-center"><span class="panel-title">{{ 'PAPETERIE.TITLE' | translate }}</span></div>
+			<div class="panel-body alert alert-success">
+				<div class="papeterie-apluspapeterie">
+					<a ng-href="{{ 'PAPETERIE.LINK_APLUSPAPETERIE' | translate }}" target="blank"><img class="img-thumbnail" ng-src="img/header/aPlusPapeterie.png"><span>{{ 'PAPETERIE.LINK_CONTENT' | translate }}</span></a>
+				</div>
+			</div>
+
+			<div>
+				<div class="thumbnail">
+			    	<div class="embed-responsive embed-responsive-16by9">
+			    		<iframe ng-src="{{ 'PAPETERIE.MOVIE' | translate | trusted}}"></iframe>
+					</div>
+			  	</div>
+			</div> 
+
+			<div class="panel-body alert alert-success papeterie-description">
+				<p>{{ 'PAPETERIE.PARAGRAPHE_ONE' | translate }}</p>
+				<p>{{ 'PAPETERIE.PARAGRAPHE_TWO' | translate }}</p>
+				<p>{{ 'PAPETERIE.PARAGRAPHE_THREE' | translate }}</p>
+				<p>{{ 'PAPETERIE.PARAGRAPHE_FOUR' | translate }}</p>
+				<p>{{ 'PAPETERIE.PARAGRAPHE_FIVE' | translate }}</p>
+			</div>
+		</div>	
+	</div>
+
+	<!-- inject:time -->
+		<div class="col-xs-12 col-sm-4 col-lg-4">
+		<div class="panel panel-default">
+			<div class="panel-heading"><span class="panel-title">{{ 'CONFIG.TIME.TITLE' | translate }}</span></div>
+			<div class="panel-body alert alert-success">
+				<aside>
+					<ul class="footer-ul">
+						<li class="label-horaire label-info dashboard-day">{{'CONFIG.TIME.WEEK' | translate }}</li>
+						<li class="label-horaire label-warning dashboard-time">{{'CONFIG.TIME.WEEK_TIME' | translate }}</li>
+						<li class="label-horaire label-info dashboard-day">{{'CONFIG.TIME.WEEKEND' | translate }}</li>
+						<li class="label-horaire label-warning dashboard-time">{{'CONFIG.TIME.WEEKEND_TIME' | translate }}</li>
+					</ul>
+				</aside>
+			</div>
+
+		</div>
+	</div>
+	<!-- endinject -->
+
+	<!-- inject:address -->
+		<div class="col-xs-12 col-sm-4 col-lg-4">
+		<div class="panel panel-default">
+			<div class="panel-heading"><span class="panel-title">{{ 'CONFIG.ADDRESS.TITLE' | translate }}</span></div>	
+			<div class="panel-body alert alert-success">
+				<aside><h3><span class="glyphicon glyphicon-align-left glyphicon-right" aria-hidden="true"></span> <span>{{ 'CONFIG.ADDRESS.HEADQUARTER' | translate }}</span></h3>		
+					<ul class="footer-ul">
+						<li><span class="glyphicon glyphicon-home glyphicon-right" aria-hidden="true"></span> {{ 'CONFIG.HEADQUARTER' | translate }}</li>
+						<li class=" footer-address">{{ 'CONFIG.ADDRESS.FIRSTLINE' | translate }}</li>
+						<li class=" footer-address">{{ 'CONFIG.ADDRESS.SECONDLINE' | translate }} {{ 'CONFIG.ADDRESS.POSTALCODE' | translate }} {{ 'CONFIG.ADDRESS.CITY' | translate }}</li>
+						<li><span class="glyphicon glyphicon-phone-alt glyphicon-right" aria-hidden="true"></span> {{ 'CONFIG.TELEPHONE' | translate }}</li>
+						<li><span class="glyphicon glyphicon-copy glyphicon-right" aria-hidden="true"></span> {{ 'CONFIG.FAX' | translate }}</li>
+						<li><span class="glyphicon glyphicon-envelope glyphicon-right" aria-hidden="true"></span> {{ 'CONFIG.MAIL' | translate }}</li>
+					</ul>
+				</aside>
+				<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2805.9388418550952!2d4.807341933263338!3d45.30966101743218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f53d9da6d4028f%3A0x1d9c9015b57ff5ea!2s34+Route+de+Marseille%2C+38150+Chanas!5e0!3m2!1sfr!2sfr!4v1451748983618" frameborder="0" style="border:0" allowfullscreen></iframe>		
+			</div>
+		</div>
+	</div>
+	<!-- endinject -->
+
+</div>

@@ -1,28 +1,185 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="olippApp">
 <head>
-<title>Imprimerie Fauchery</title>
+  <title>Imprimerie Fauchery</title>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-<link href="assets/favicon.ico" rel="icon" type="image/x-icon" />
+  <!-- Favicon-->
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-47567840-4', 'auto');
-  ga('send', 'pageview');
-</script>
+  <!-- jquery & bootsrap -->
+  <script src="libs/jquery.js"></script>
+  <script src="libs/bootstrap.js"></script>
+
+  <!-- Stylesheets -->
+  <link href="css/fauchery.css" rel="stylesheet" media="screen">
+  <link href="css/angular-block-ui.min.css" rel="stylesheet" media="screen">
+  <link href="css/ng-notify.min.css" rel="stylesheet" media="screen">
+
+  <script src="libs/angular.js"></script>
+  <script src="libs/angular-route.js"></script>
+  <script src="libs/angular-resource.js"></script>
+  <script src="libs/angular-block-ui.min.js"></script>
+  <script src="libs/ng-notify.min.js"></script>
+  <script src="libs/angular-translate.js"></script>
+  <script src="libs/angular-translate-loader-url.js"></script>
+  <script src="libs/fauchery.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-47567840-4', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 
 </head>
-<body> 
-  <header></header>
-  <navbar></navbar>
-  <carousel></carousel>
-  <ui-view></ui-view>
-  <footer></footer>
+<body>
+
+  <header>   
+
+    <!-- inject:header -->
+    <div class="container logo">
+	<div class="row">
+		<div class="col-xs-12 col-md-12 col-lg-12">
+			<img class="img-responsive img-logo" ng-src="img/header/logo.png">
+			<a class="link-apluspapeterie" ng-href="http://fauchery.apluspapeterie.fr/" target="blank">
+				<img class="img-responsive" ng-src="img/header/site-marchand.png">
+			</a>					
+		</div>
+	</div>
+</div>
+    <!-- endinject -->
+
+    <!-- inject:navbar -->
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header"> 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" arial-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>        
+      </button>
+      <a class="navbar-brand" ng-href="#/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>    
+    </div>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#/imprimerie">{{ 'NAVBAR.MENU_IMPRIMERIE' | translate }}</a>
+          </li>
+          <li>
+            <a href="#/papeterie">{{ 'NAVBAR.MENU_PAPETERIE' | translate }}</a>
+          </li>
+          <li>
+            <a href="#/enseignes">{{ 'NAVBAR.MENU_ENSEIGNES' | translate }}</a>
+          </li>
+          <li>
+            <a href="#/movie">{{ 'NAVBAR.MENU_MOVIE' | translate }}</a>
+          </li>
+          <li>
+            <a href="#/contact">{{ 'NAVBAR.MENU_CONTACT' | translate }}</a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</nav>
+    <!-- endinject -->
+
+    <!-- inject:carousel -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img class="img-responsive center-block" src="img/carousel/banniere-1.png">
+    </div>
+
+    <div class="item">
+      <img class="img-responsive center-block" src="img/carousel/banniere-2.png">
+    </div>
+
+    <div class="item">
+      <img class="img-responsive center-block" src="img/carousel/banniere-3.png">
+    </div>
+
+  </div>
+
+  <!-- Left and right controls -->
+<!--   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a> -->
+</div>
+    <!-- endinject -->
+
+  </header>
+
+  <div class="view-container">
+    <div ng-view class="view-frame">
+    </div>
+  </div>
+
+  <footer>
+
+    <!-- inject:footer -->
+    <div class="container footer">
+	<div class="row">
+
+		<div class="col-xs-12 col-sm-4 col-lg-4 footer-logo">
+			<img class="img-thumbnail" src="img/footer/logo.png"/>
+			<br/><br/><br/><p>&nbsp;</p>
+		</div>
+
+		<div class="col-xs-12 col-sm-4 col-lg-4">
+			<aside><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>{{ 'CONFIG.ADDRESS.HEADQUARTER' | translate }}</span></h3>		
+				<ul class="footer-ul">
+					<li><span class="glyphicon glyphicon-home glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.HEADQUARTER' | translate}}</li>
+					<li class=" footer-address">{{ 'CONFIG.ADDRESS.FIRSTLINE' | translate}}</li>
+					<li class=" footer-address">{{ 'CONFIG.ADDRESS.SECONDLINE' | translate}} {{ 'CONFIG.ADDRESS.POSTALCODE' | translate}} {{ 'CONFIG.ADDRESS.CITY' | translate}}</li>
+					<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.TELEPHONE' | translate}}</li>
+					<li><span class="glyphicon glyphicon-copy glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.FAX' | translate}}</li>
+					<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.MAIL' | translate}}</li>
+				</ul>
+			</aside>
+		</div>
+
+		<div class="col-xs-12 col-sm-4 col-lg-4">
+			<aside ><h3><span class="glyphicon glyphicon-align-left glyphicon-footer" aria-hidden="true"></span> <span>{{ 'CONFIG.CEO.TITLE' | translate }}</span></h3>			
+				<ul class="footer-ul">
+					<li><span class="glyphicon glyphicon-user glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.NAME' | translate}}</li>
+					<li><span class="glyphicon glyphicon-phone-alt glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.TELEPHONE' | translate}}</li>
+					<li><span class="glyphicon glyphicon-phone glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.PORTABLE' | translate}}</li>
+					<li><span class="glyphicon glyphicon-envelope glyphicon-footer" aria-hidden="true"></span> {{ 'CONFIG.CEO.MAIL' | translate}}</li>
+				</ul>
+			</aside>			
+		</div>
+	</div>
+
+	<div class="row">
+		<span class="footer-copyright">Copyright © {{date | date:'yyyy'}} - {{'CONFIG.HEADQUARTER' | translate}}</span> 
+	</div>
+</div>
+    <!-- endinject -->
+  
+  </footer>
+
 </body>
 </html>

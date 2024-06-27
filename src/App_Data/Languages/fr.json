@@ -1,0 +1,138 @@
+{
+	"BLOCKUI": {
+	    "DEFAULT_MESSAGE_LOADING": "Chargement"
+	  },
+	"NAVBAR": {
+		"MENU_IMPRIMERIE": "IMPRIMERIE",
+		"MENU_PAPETERIE": "PAPETERIE",
+		"MENU_ENSEIGNES": "ENSEIGNES",
+		"MENU_MOVIE": "VIDEOS",
+		"MENU_CONTACT": "NOUS CONTACTER"
+	},
+	"CONFIG": {
+		"HEADQUARTER": "Imprimerie Fauchery",
+		"ADDRESS": {
+			"TITLE": "ADRESSE",
+			"HEADQUARTER": "Fauchery SAS",
+			"FIRSTLINE": "34, route de Marseille",
+			"SECONDLINE": "RN-7",
+			"POSTALCODE": "38150",
+			"CITY": "Chanas"
+		},
+		"TELEPHONE": "04 74 84 25 83",
+		"FAX": "04 74 84 22 85",
+		"SITE": "http://www.fauchery.com/",
+		"MAIL": "imprimerie@fauchery.com",
+		"CEO": {
+			"TITLE": "Contact",
+			"NAME": "Laurent Tardy",
+			"TELEPHONE": "04 74 84 25 83",
+			"PORTABLE": "06 09 10 46 77",
+			"MAIL": "imprimerie@fauchery.com"
+		},
+		"TIME":{
+			"TITLE": "HORAIRES",
+			"WEEK": "Du Lundi au Vendredi",
+			"WEEK_TIME": "9h/12h-14h/19h",
+			"WEEKEND": "Samedi",
+			"WEEKEND_TIME": "9h/12h-14h/18h"
+		}
+	},
+	"DASHBOARD": {
+		"MAIN_TITLE": "FAUCHERY",
+		"BODY_TITLE": "Il en faut du caractère pour traverser effectivement plus d'un siècle d'existence, dans un monde en pleine mutation, concurrentiel, où bien peu d'entreprises perdurent !",
+		"BODY_TEXT": "Le secret de son aspect toujours vert, Fauchery le doit sans doute à sa tradition familiale, sa haute idée du service à la clientèle, sa longue expérience et son travail de qualité. Elle le doit encore à sa faculté d'adaptation à la fois aux demandes du public, et aux nouvelles techniques. De la pré-presse à l'offset en passant par l'impression numérique, de la simple carte de visite à l'impression du gros catalogue, tout est possible! Un service complet et de proximité, il suffit de le demander. A votre service depuis plus de 100 ans.",
+		"IMPRIMERIE": {
+			"TITLE": "IMPRIMERIE",
+			"DESCRIPTION": "Malgré des années d'expérience, il y a toujours un brin d'émotion lors de la sortie de la première épreuve avant de lancer l'impression en série..."
+		},
+		"PAPETERIE": {
+			"TITLE": "PAPETERIE",
+			"DESCRIPTION": "Fauchery fait partie de APLUS PAPETERIE qui est une enseigne d’une cinquantaine de papetiers indépendants implantés en France..."
+		},
+		"ENSEIGNES": {
+			"TITLE": "ENSEIGNES",
+			"DESCRIPTION": "Votre imprimeur Fauchery réalise enseigne publicitaire, signalétique, panneau publicitaire, marquage adhésif, covering ..."
+		},
+		"BUTTON_CAPTION": "Lire la suite",
+		"MOVIES": {
+			"ONE": "http://www.youtube.com/embed/xVMpFXkJZZs",
+			"TWO": "http://www.youtube.com/embed/qJA-Ys0eNAw",
+			"THREE": "http://www.youtube.com/embed/sC0tzYQZ1EE"
+		}
+	},
+	"IMPRIMERIE": {
+		"TITLE": "IMPRIMERIE",
+		"DESCRIPTION": "L'imprimerie est à l'écriture ce que l'écriture avait été aux hiéroglyphes : elle a fait faire un second pas à la pensée.",
+		"MOVIE": "http://www.youtube.com/embed/PWS77zzwt2s",
+		"OFFSET": {
+			"TITLE": "Impression Offset",
+			"DESCRIPTION": "Le plein de couleurs ! Malgré des années d'expérience, il y a toujours un brin d'émotion lors de la sortie de la première épreuve avant de lancer l'impression en série. Que ce soit pour de la documentation administrative, de la plaquette de notoriété, du catalogue, de simples fiches ou étiquettes, le coup d'œil du professionnel est déterminant, l'exigence de qualité est impérative pour un tirage en noir, deux couleurs ou en quadrichromie. Fauchery est rodé à toutes épreuves et surtout dans le respect des délais. Pour un service complet, il suffit de commander !"
+		},
+		"PREPRESSE": {
+			"TITLE": "Prépresse",
+			"DESCRIPTION": "Déjà une bonne impression ! Les meilleures idées naissent du dialogue. Envie d’une plaquette, de têtes de lettres, de calendriers, catalogues, mailing ? L'idée s'arrête à la mise en forme, à l'utilisation ? L’imprimerie Fauchery peut vous aider à réaliser ces idées par l’intervention d’un personnel compétent et le soutien technique adapté. Le concept prend corps et s’habille même de couleurs. Il suffit d’oser."
+		},
+		"NUMERIQUE": {
+			"TITLE": "Impression numérique",
+			"DESCRIPTION": "L’exigence de la modernité ! Non décidément, la photocopie couleur n’est pas totalement satisfaisante, l’impression classique trop coûteuse pour quelques exemplaires, un ordinateur relié à une presse numérique ou presse grand format et le tour est joué. Une formule bien adaptée à la petite série. Vous pouvez même faire de l’affiche ! Fauchery prend en compte vos besoins, il suffit de les exprimer."
+		}
+	},
+	"PAPETERIE": {
+		"TITLE": "PAPETERIE",
+		"LINK_APLUSPAPETERIE": "http://fauchery.apluspapeterie.fr/",
+		"LINK_CONTENT": "APLUS PAPETERIE",
+		"MOVIE": "http://www.youtube.com/embed/r-z2SA58V0g",
+		"PARAGRAPHE_ONE": "Fauchery fait partie de APLUS PAPETERIE qui est une enseigne d’une cinquantaine de papetiers indépendants implantés en France.",
+		"PARAGRAPHE_TWO": "Les magasins Aplus se sont regroupés au sein d’une coopérative afin de garantir à leur clientèle des prix d’achats négociés, des promotions et des prestations de services qualitatives tout au long de l’année.",
+		"PARAGRAPHE_THREE": "Nos papeteries sont des magasins multi-métiers, qui commercialisent de la papeterie traditionnelle, des fournitures scolaires pour les écoles, des fournitures de bureau et informatiques pour les entreprises, ainsi que pour certains, des produits de librairie et des objets-cadeaux.",
+		"PARAGRAPHE_FOUR": "Chaque adhérent est un spécialiste de proximité, qui vous propose la qualité de service et les prix d’une grande enseigne, tout en offrant le relationnel et le savoir-faire d’un papetier traditionnel.",
+		"PARAGRAPHE_FIVE": "La marque aplus a été intégralement relookée en 2013, à l’occasion des 20 ans de la coopérative, symbole de renouveau et de dynamisme."
+	},
+	"ENSEIGNES": {
+		"TITLE": "ENSEIGNES",
+		"DESCRIPTION": "Votre imprimeur Fauchery réalise enseigne publicitaire, signalétique, panneau publicitaire, marquage adhésif, covering ...",
+		"ENSEIGNES": {
+			"TITLE": "Enseignes",
+			"DESCRIPTION": "L’enseigne de votre entreprise ou de votre commerce est un élément primordial de votre communication. L'imprimerie Fauchery propose des enseignes d'un rendu éblouissant."
+		},
+		"BUREAU": {
+			"TITLE": "Bureaux et Vitrines",
+			"DESCRIPTION": "Une touche originale et personnelle pour vos bureaux et vitrines ? Les vinyles opaques polymères, vitrophanies transparentes (avec blanc de soutien) ou les vinyles microperforés permettent d’afficher l’image de votre entreprise ou de communiquer ponctuellement sur une offre ou une actualité."
+		},
+		"VEHICULE": {
+			"TITLE": "Véhicules",
+			"DESCRIPTION": "Faites de votre véhicule votre SUPPORT de communication. C’est un outil publicitaire mobile visible par tous 24h / 24h – 7j / 7j. C’est un moyen pour communiquer sur l’image de votre entreprise profitablement et dont il serait dommage de se passer. De la citadine au semi-remorque, le marquage de véhicule se réalise grâce à un support adhésif résistant, adapté pour l’extérieur et pour le lavage."
+		}
+	},
+	"MOVIES": {
+		"ONE": "http://www.youtube.com/embed/5kEOvw9hdho",
+		"TWO": "http://www.youtube.com/embed/qJA-Ys0eNAw",
+		"THREE": "http://www.youtube.com/embed/EIkpuYAJvVM",
+		"FOUR": "http://www.youtube.com/embed/xVMpFXkJZZs",
+		"FIVE": "http://www.youtube.com/embed/r-z2SA58V0g",
+		"SIX": "http://www.youtube.com/embed/Ymz-ZvTVD54",
+		"SEVEN": "http://www.youtube.com/embed/LNgzUHCQYEI",
+		"HEIGHT": "http://www.youtube.com/embed/x_HLAvTtp7U",
+		"NINE": "http://www.youtube.com/embed/F4joTiKYNVY",
+		"TEN": "http://www.youtube.com/embed/sC0tzYQZ1EE",
+		"ELEVEN": "http://www.youtube.com/embed/PWS77zzwt2s"
+	},
+	"CONTACT_FORM": {
+		"TITLE": "IMPRIMERIE@FAUCHERY.COM",
+		"FIELD_LASTNAME": "Nom",
+		"REQUIRED_FIELD_LASTNAME": "Votre nom est requis.",
+		"FIELD_FIRSTNAME": "Prénom",
+		"REQUIRED_FIELD_FIRSTNAME": "Votre prénom est requis.",
+		"FIELD_MAIL": "Email",
+		"REQUIRED_FIELD_MAIL": "Votre E-mail est requis.",
+		"VALID_FIELD_MAIL": "Ceci n'est pas un E-mail valide. Merci d'entrer un E-mail valide.",
+		"FIELD_COMPANY": "Société",
+		"FIELD_PHONE": "Téléphone",
+		"FIELD_SUBJECT": "Objet",
+		"REQUIRED_FIELD_SUBJECT": "L'objet du mail est requis.",
+		"FIELD_MESSAGE": "Message",
+		"REQUIRED_FIELD_MESSAGE": "Le message est requis.",
+		"BUTTON": "Envoyer"
+	}
+}
