@@ -60,8 +60,8 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['ema
     $header .= "<body>";
 
     $footer = "<div style=\"color: white; height: 60px; background-color: #1E3E14; margin-top: 20px; padding: 5px 5px 5px 5px; text-align: center;\">";
-    $footer .= "IMPRIMERIE FAUCHERY - 34, Route de Marseille - RN-7 38150 CHANAS - Tèl: 04 74 84 25 83 - Fax: 04 74 84 22 85 - Mail: imprimerie@fauchery.com";
-    $footer .= " - Laurent TARDY - Tèl: 04 74 84 25 83 - Mobile: 06 09 10 46 77";
+    $footer .= "IMPRIMERIE FAUCHERY - 34, Route de Marseille - RN-7 38150 CHANAS - Tèl: 04 74 84 26 13 - Mail: imprimerie@fauchery.com";
+    $footer .= " - Laurent TARDY - Tèl: 04 74 84 26 13 - Mobile: 06 09 10 46 77";
     $footer .= "</div>";
     $footer .= "</body>";
     $footer .= "</html>";
